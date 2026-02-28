@@ -133,8 +133,7 @@ export default function KviklånStraksUdbetalingPage() {
   const eligibilityRequirements = [
     { requirement: 'Alder', detail: 'Du skal være mindst 18 år (nogle steder kræves 21 eller 25 år)' },
     { requirement: 'Folkeregisteradresse', detail: 'Du skal være bosiddende i Danmark' },
-    { requirement: 'Indkomst', detail: 'Nogle udbydere kræver, at du kan dokumentere en fast indkomst' },
-    { requirement: 'RKI-status', detail: 'Mange udbydere afslår ansøgninger fra personer registreret som dårlige betalere' }
+    { requirement: 'Indkomst', detail: 'Nogle udbydere kræver, at du kan dokumentere en fast indkomst' }
   ]
 
   const whenToUse = [

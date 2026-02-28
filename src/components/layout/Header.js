@@ -31,14 +31,13 @@ export default function Header() {
         { name: 'Små lån', href: '/smaa-laan' }
       ]
     },
-    { name: 'Boliglån', href: '/kreditforeningslaan', icon: Building },
+    { name: 'Boliglån', href: '/boliglaan', icon: Building },
     { 
       name: 'Forbrugslån', 
       href: '/forbrugslaan', 
       icon: ShoppingBag,
       subItems: [
         { name: 'Standard forbrugslån', href: '/forbrugslaan' },
-        { name: 'Forbrugslån trods RKI', href: '/forbrugslaan/rki' },
         { name: 'Renter og ÅOP', href: '/forbrugslaan/renter-og-aop' }
       ]
     },

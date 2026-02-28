@@ -87,7 +87,7 @@ export default function KvikloanUdenKreditvurderingPage() {
     },
     {
       question: 'Hvad hvis jeg ikke kan betale lånet tilbage?',
-      answer: 'Selv uden kreditvurdering kan manglende betaling få alvorlige konsekvenser - inkasso, rykkergebyrer og negativt RKI. Det kan påvirke din fremtidige mulighed for at få lån markant.'
+      answer: 'Selv uden kreditvurdering kan manglende betaling få alvorlige konsekvenser - inkasso og rykkergebyrer. Det kan påvirke din fremtidige mulighed for at få lån markant.'
     }
   ]
 
@@ -95,7 +95,6 @@ export default function KvikloanUdenKreditvurderingPage() {
   const benefits = [
     { text: 'Hurtig godkendelse', icon: Clock },
     { text: 'Minimal dokumentation', icon: FileText },
-    { text: 'Også for RKI-registrerede', icon: UserCheck },
     { text: 'Ingen lang ventetid', icon: Zap },
     { text: 'Simpel ansøgningsproces', icon: Target },
     { text: 'Udbetaling samme dag', icon: Banknote }
@@ -231,8 +230,8 @@ export default function KvikloanUdenKreditvurderingPage() {
                   <strong className="text-orange-600"> ikke helt uden kontrol</strong>.
                 </p>
                 <p className="text-lg text-slate-700 leading-relaxed">
-                  De fleste udbydere laver stadig grundlæggende tjek af din identitet, 
-                  indkomst og om du står i RKI. Forskellen er hastigheden og dybden af kontrollen.
+                  De fleste udbydere laver stadig grundlæggende tjek af din identitet og 
+                  indkomst. Forskellen er hastigheden og dybden af kontrollen.
                 </p>
               </div>
               

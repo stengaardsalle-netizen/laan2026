@@ -1055,11 +1055,6 @@ export default function RenterAOPPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/forbrugslaan/rki" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      RKI Forbrugslån
-                    </Link>
-                  </li>
-                  <li>
                     <Link href="/forbrugslaan" className="text-slate-400 hover:text-white transition-colors duration-300">
                       Forbrugslån guide
                     </Link>

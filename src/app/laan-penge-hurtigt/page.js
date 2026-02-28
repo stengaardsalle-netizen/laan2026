@@ -166,7 +166,7 @@ export default function LaanPengeHurtigtPage() {
     },
     {
       question: 'Kan jeg få lån med dårlig kredit?',
-      answer: 'Nogle udbydere specialiserer sig i lån til personer med dårlig kredit, men renten vil være højere. Vi sammenligner også udbydere der accepterer RKI-registreringer.'
+      answer: 'Nogle udbydere specialiserer sig i lån til personer med dårlig kredit, men renten vil være højere. Vi sammenligner udbydere med forskellige krav til kreditvurdering.'
     }
   ]
 
