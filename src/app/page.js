@@ -754,7 +754,7 @@ export default function HomePage() {
                 <h3 className="font-black text-lg sm:text-xl mb-2">Har du andre spørgsmål?</h3>
                 <p className="text-blue-100 mb-4 sm:mb-6 text-sm sm:text-base">Vores eksperter er klar til at hjælpe dig</p>
                 <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                  <a href="tel:+4570123456" className="bg-white/20 hover:bg-white/30 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl font-bold transition-colors duration-300 text-sm sm:text-base">
+                  <a href="tel:+4531380217" className="bg-white/20 hover:bg-white/30 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl font-bold transition-colors duration-300 text-sm sm:text-base">
                     📞 Ring til os
                   </a>
                   <a href="mailto:info@fitezfinance.com" className="bg-white/20 hover:bg-white/30 px-4 py-2 sm:px-6 sm:py-3 rounded-2xl font-bold transition-colors duration-300 text-sm sm:text-base">

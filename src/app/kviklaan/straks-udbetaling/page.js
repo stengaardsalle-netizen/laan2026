@@ -688,7 +688,7 @@ export default function KviklånStraksUdbetalingPage() {
               </Link>
               
               <a
-                href="tel:+4570123456"
+                href="tel:+4531380217"
                 className="inline-flex items-center gap-4 text-xl font-bold text-white hover:text-yellow-300 transition-colors duration-300"
               >
                 <Phone className="h-6 w-6" />
