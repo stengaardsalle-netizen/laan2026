@@ -69,22 +69,22 @@ export default function MadsHolmAndersenPage() {
   // Certifications and education
   const education = [
     {
-      degree: 'Cand.merc. i Finance & Accounting',
-      institution: 'Copenhagen Business School',
-      year: '2014',
-      description: 'Specialisering i finansielle markeder og virksomhedsfinansiering'
+      degree: 'AI kurser',
+      institution: '',
+      year: '2026',
+      description: 'Har deltaget i kurser indenfor AI udvikling'
     },
     {
-      degree: 'Finansiel Rådgiver Certificering',
-      institution: 'Finanstilsynet',
-      year: '2017',
-      description: 'Autorisation til at rådgive om lån og investeringer'
+      degree: 'CEO',
+      institution: '',
+      year: '2005',
+      description: 'Stifter af finansiel formidlingsservice'
     },
     {
-      degree: 'Digital Leadership Program',
-      institution: 'INSEAD',
-      year: '2019',
-      description: 'Lederskabsudvikling med fokus på digital transformation'
+      degree: 'Datafagtekniker',
+      institution: '',
+      year: '2002',
+      description: 'Udvikling og servicering af databasesystemer'
     }
   ]
 
@@ -162,12 +162,8 @@ export default function MadsHolmAndersenPage() {
               <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-12 shadow-2xl text-white relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
                 <div className="relative text-center">
-                  <div className="h-48 w-48 mx-auto rounded-full mb-8 border-4 border-white/30 overflow-hidden bg-white/10">
-                    <img 
-                      src="/images/mads-holm-andersen.jpg" 
-                      alt="Jesper Jensen - Grundlægger og CEO af Lån.dk" 
-                      className="w-full h-full object-cover"
-                    />
+                  <div className="h-48 w-48 mx-auto rounded-full mb-8 border-4 border-white/30 overflow-hidden bg-white/10 flex items-center justify-center">
+                    <User className="h-24 w-24 text-white/40" />
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-center justify-center gap-3">
@@ -326,11 +322,11 @@ export default function MadsHolmAndersenPage() {
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black mb-8">
               <span className="bg-gradient-to-r from-slate-900 to-indigo-900 bg-clip-text text-transparent">
-                Uddannelse & certificeringer
+                Baggrund
               </span>
             </h2>
             <p className="text-xl text-slate-600">
-              Solid akademisk baggrund kombineret med brancherelevante certificeringer
+              Erfaring indenfor IT, finans og digital udvikling
             </p>
           </div>
 
@@ -344,8 +340,7 @@ export default function MadsHolmAndersenPage() {
                   <div className="text-sm font-bold text-indigo-600 mb-2">{edu.year}</div>
                 </div>
                 
-                <h3 className="font-black text-slate-900 text-lg mb-2 text-center">{edu.degree}</h3>
-                <h4 className="text-indigo-600 font-semibold mb-4 text-center">{edu.institution}</h4>
+                <h3 className="font-black text-slate-900 text-lg mb-4 text-center">{edu.degree}</h3>
                 <p className="text-slate-700 text-sm text-center">{edu.description}</p>
               </div>
             ))}
