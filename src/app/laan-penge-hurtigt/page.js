@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Head from 'next/head'
 import Header from '../../components/layout/Header'
 import { 
   Building2,
@@ -185,33 +184,6 @@ export default function LaanPengeHurtigtPage() {
 
   return (
     <>
-      <Head>
-        <title>Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån | Lån.dk 2025</title>
-        <meta 
-          name="description" 
-          content="Lån penge hurtigt! Sammenlign kviklån, SMS lån og forbrugslån. Få penge på kontoen samme dag. 100% gratis sammenligning." 
-        />
-        <meta name="keywords" content="lån penge hurtigt, kviklån, SMS lån, hurtige lån, forbrugslån, lån samme dag, online lån" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://loan-dk.vercel.app/laan-penge-hurtigt" />
-        
-        <meta property="og:title" content="Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån | Lån.dk" />
-        <meta property="og:description" content="Lån penge hurtigt! Sammenlign kviklån, SMS lån og forbrugslån. Få penge på kontoen samme dag." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://loan-dk.vercel.app/laan-penge-hurtigt" />
-        <meta property="og:locale" content="da_DK" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån" />
-        <meta name="twitter:description" content="Lån penge hurtigt! Sammenlign kviklån, SMS lån og forbrugslån. Få penge samme dag." />
-        
-        <meta name="language" content="Danish" />
-        <meta name="geo.region" content="DK" />
-        <meta name="geo.country" content="Denmark" />
-        <meta name="author" content="Lån.dk" />
-      </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
         <Header />
         
