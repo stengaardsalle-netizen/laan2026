@@ -39,13 +39,8 @@ export default function OmOsPage() {
 
   const team = [
     {
-      name: 'Mads Holm Andersen',
-      role: 'Økonomisk rådgiver',
-      description: 'Over 15 års erfaring i lånebranchen'
-    },
-    {
-      name: 'Jesper Nielsen',
-      role: 'Finansiel analytiker', 
+      name: 'Jesper Jensen',
+      role: 'Grundlægger og CEO', 
       description: 'Specialist i bolig- og forbrugslån'
     }
   ]
@@ -232,7 +227,7 @@ export default function OmOsPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 gap-8 sm:gap-12 max-w-md mx-auto">
             {team.map((member, index) => (
               <div key={index} className="bg-slate-50 rounded-3xl p-6 sm:p-8 text-center hover:bg-blue-50 hover:scale-105 transition-all duration-300 group mx-4 sm:mx-0">
                 <div className="h-20 w-20 sm:h-24 sm:w-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center mx-auto mb-4 sm:mb-6 text-2xl sm:text-3xl font-black text-white group-hover:scale-110 transition-transform duration-300">

@@ -40,7 +40,7 @@ import {
   Globe
 } from 'lucide-react'
 
-export default function MadsHolmAndersenPage() {
+export default function JesperJensenPage() {
   // Experience timeline
   const experience = [
     {
