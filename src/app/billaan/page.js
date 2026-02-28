@@ -59,7 +59,7 @@ export default function BilloanPage() {
       minRate: 4.5,
       maxRate: 9.2,
       greenDiscount: 0.7,
-      features: ['Hurtig sagsbehandling', 'Personlig rådgivning', 'Fleksible afdrag'],
+      features: ['Hurtig sagsbehandling', 'Personlig vejledning', 'Fleksible afdrag'],
       rating: 4.4,
       setupFee: 1995,
       logo: '🏛️',

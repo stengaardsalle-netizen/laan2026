@@ -512,7 +512,7 @@ export default function ForbrugslaanPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Award className="h-6 w-6 text-green-300" />
-                <span className="font-semibold">Gratis rådgivning</span>
+                <span className="font-semibold">Gratis vejledning</span>
               </div>
             </div>
           </div>

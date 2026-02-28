@@ -223,7 +223,7 @@ export default function OmOsPage() {
               Mød vores eksperter
             </h2>
             <p className="text-lg sm:text-xl text-slate-600 px-4">
-              Erfarne finansielle rådgivere med passionen for at hjælpe dig
+              Erfarne finansielle vejledere med passionen for at hjælpe dig
             </p>
           </div>
           
@@ -259,7 +259,7 @@ export default function OmOsPage() {
                   Har du spørgsmål?
                 </h2>
                 <p className="text-lg sm:text-xl text-slate-600 leading-relaxed mb-6 sm:mb-8">
-                  Vi er her for at hjælpe dig. Kontakt vores eksperter for personlig rådgivning om dit lånevalg.
+                  Vi er her for at hjælpe dig. Kontakt vores eksperter for personlig vejledning om dit lånevalg.
                 </p>
                 
                 <div className="space-y-4 sm:space-y-6">

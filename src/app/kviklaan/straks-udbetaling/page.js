@@ -691,7 +691,7 @@ export default function KviklånStraksUdbetalingPage() {
                 className="inline-flex items-center gap-4 text-xl font-bold text-white hover:text-yellow-300 transition-colors duration-300"
               >
                 <Phone className="h-6 w-6" />
-                <span>Ring og få rådgivning</span>
+                <span>Ring og få vejledning</span>
               </a>
             </div>
             

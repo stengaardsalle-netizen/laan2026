@@ -88,7 +88,7 @@ export default function KontaktPage() {
   ]
 
   const supportFeatures = [
-    { icon: Shield, title: 'Gratis rådgivning', desc: '100% uforpligtende' },
+    { icon: Shield, title: 'Gratis vejledning', desc: '100% uforpligtende' },
     { icon: Users, title: 'Erfarne eksperter', desc: '15+ års erfaring' },
     { icon: Award, title: 'Pålidelig service', desc: '4.8/5 stjerner' },
     { icon: Headphones, title: '24/7 support', desc: 'Vi er her når du har brug for os' }

@@ -51,7 +51,7 @@ const benefits = [
     stats: 'Ingen skjulte gebyrer'
   },
   {
-    title: 'Personlig rådgivning',
+    title: 'Personlig vejledning',
     description: 'Baseret på din økonomiske situation og behov hjælper vi dig med at finde det mest passende lån.',
     icon: UserGroupIcon,
     gradient: 'from-pink-500 to-rose-600',

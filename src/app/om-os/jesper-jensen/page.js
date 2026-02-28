@@ -58,7 +58,7 @@ export default function JesperJensenPage() {
 
   // Core competencies
   const competencies = [
-    { title: 'Lånerådgivning', icon: Calculator, level: 95 },
+    { title: 'Lånevejledning', icon: Calculator, level: 95 },
     { title: 'Finansiel analyse', icon: BarChart3, level: 90 },
     { title: 'Markedsforståelse', icon: TrendingUp, level: 92 },
     { title: 'Digital innovation', icon: Sparkles, level: 88 },
@@ -283,7 +283,7 @@ export default function JesperJensenPage() {
               </span>
             </h2>
             <p className="text-xl text-slate-600">
-              Dyb ekspertise inden for finansiel rådgivning og markedsforståelse
+              Dyb ekspertise inden for finansiel vejledning og markedsforståelse
             </p>
           </div>
 

@@ -69,7 +69,7 @@ export default function HomePage() {
     },
     {
       icon: Users,
-      title: 'Gratis rådgivning',
+      title: 'Gratis vejledning',
       description: 'Vores eksperter hjælper dig med at finde det rigtige lån'
     },
     {
@@ -110,8 +110,8 @@ export default function HomePage() {
       answer: 'Ja, vi samarbejder med banker der specialiserer sig i lån til personer med varierende kreditprofiler. Selvom mulighederne kan være begrænsede, finder vi ofte løsninger der ikke er tilgængelige gennem traditionelle banker.'
     },
     {
-      question: 'Kan jeg få rådgivning om hvilket lån der passer bedst til mig?',
-      answer: 'Ja, vores certificerede lånerådgivere er tilgængelige på telefon og email for gratis rådgivning. Vi hjælper dig med at forstå forskellen mellem lånetyperne og finder den løsning der passer bedst til din specifikke situation og økonomi.'
+      question: 'Kan jeg få vejledning om hvilket lån der passer bedst til mig?',
+      answer: 'Ja, vores certificerede lånevejledere er tilgængelige på telefon og email for gratis vejledning. Vi hjælper dig med at forstå forskellen mellem lånetyperne og finder den løsning der passer bedst til din specifikke situation og økonomi.'
     }
   ]
 

@@ -536,7 +536,7 @@ export default function KvikloanUdenKreditvurderingPage() {
             <div className="flex flex-wrap items-center justify-center gap-12 text-white/80 mt-16">
               <div className="flex items-center gap-3">
                 <Shield className="h-6 w-6 text-red-300" />
-                <span className="font-semibold">Ansvarlig lånerådgivning</span>
+                <span className="font-semibold">Ansvarlig lånevejledning</span>
               </div>
               <div className="flex items-center gap-3">
                 <Eye className="h-6 w-6 text-red-300" />
