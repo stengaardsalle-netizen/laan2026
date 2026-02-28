@@ -31,7 +31,7 @@ import {
   Smartphone,
   Mail,
   Phone,
-  MapPin,/Users/jesper/Downloads/loan-main/src/components/layout/Header.js
+  MapPin,
   Briefcase,
   GraduationCap,
   Star,
