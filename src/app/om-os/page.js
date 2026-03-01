@@ -162,7 +162,7 @@ export default function OmOsPage() {
               {[
                 { icon: CheckCircle, title: 'Pålidelig', desc: 'Godkendt af finanstilsynet' },
                 { icon: Shield, title: 'Sikker', desc: '256-bit SSL kryptering' },
-                { icon: Award, title: 'Anerkendt', desc: '4.8/5 stjerner på Trustpilot' },
+                { icon: Award, title: 'Anerkendt', desc: '4.8/5 stjerner fra kunder' },
                 { icon: TrendingUp, title: 'Effektiv', desc: 'Svar på 2 minutter' }
               ].map((item, index) => (
                 <div key={index} className="bg-white/80 backdrop-blur-xl rounded-2xl p-4 sm:p-6 shadow-xl border border-white/20 hover:scale-105 transition-all duration-300 group">

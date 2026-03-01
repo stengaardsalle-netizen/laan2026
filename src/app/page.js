@@ -848,7 +848,7 @@ export default function HomePage() {
                 </div>
                 <div className="text-left">
                   <div className="font-bold text-white text-sm sm:text-base">4.8/5 stjerner</div>
-                  <div className="text-xs sm:text-sm text-white/60">på Trustpilot</div>
+                  <div className="text-xs sm:text-sm text-white/60">fra kunder</div>
                 </div>
               </div>
             </div>
@@ -998,7 +998,7 @@ export default function HomePage() {
                 </div>
                 <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-500">
                   <Award className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-500" />
-                  4.8/5 på Trustpilot
+                  4.8/5 fra kunder
                 </div>
               </div>
             </div>
