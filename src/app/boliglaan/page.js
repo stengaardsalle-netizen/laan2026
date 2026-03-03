@@ -1,762 +1,399 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../components/layout/Header'
-import { 
-  Building2,
-  CheckCircle,
-  Calculator,
-  Coins,
-  Clock,
-  TrendingUp,
-  Shield,
-  ArrowRight,
-  Sparkles,
-  TrendingDown,
-  Banknote,
-  ChevronDown,
-  Target,
-  Lightbulb,
-  BookOpen,
-  PieChart,
-  Lock,
-  Unlock,
-  BarChart3,
-  LineChart
-} from 'lucide-react'
+import { Building2, CheckCircle, Calculator, Coins, Clock, TrendingUp, Shield, ArrowRight, BookOpen, ChevronDown, TrendingDown, Banknote, Lock, Unlock, BarChart3, AlertTriangle, Percent, ArrowDownUp, RefreshCw } from 'lucide-react'
 
-export default function KreditforeningslaanPage() {
+export default function BoliglaanPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
-  
-  // Calculator state
-  const [loanAmount, setLoanAmount] = useState(2000000)
-  const [interestRate, setInterestRate] = useState(3.5)
-  const [loanTerm, setLoanTerm] = useState(30)
-  const [isInterestOnly, setIsInterestOnly] = useState(false)
-  const [interestOnlyPeriod, setInterestOnlyPeriod] = useState(10)
-  const [monthlyPayment, setMonthlyPayment] = useState(0)
-  const [totalCost, setTotalCost] = useState(0)
-  const [totalInterest, setTotalInterest] = useState(0)
 
-  // Loan types
-  const loanTypes = [
-    {
-      title: 'Fastforrentet lån',
-      icon: Lock,
-      description: 'Renten er fastsat i hele lånets løbetid og giver dig sikkerhed for den månedlige ydelse.',
-      rate: '2-5%',
-      stability: 'Høj',
-      risk: 'Lav',
-      color: 'from-blue-500 to-indigo-600',
-      features: ['Stabil månedlig ydelse', 'Beskyttet mod rentestigninger', 'Mulighed for konvertering']
-    },
-    {
-      title: 'Variabelt forrentet lån',
-      icon: Unlock,
-      description: 'Renten følger markedsrenten og justeres typisk hver 6. måned eller årligt.',
-      rate: '1-4%',
-      stability: 'Lav',
-      risk: 'Høj',
-      color: 'from-green-500 to-emerald-600',
-      features: ['Lavere startrente', 'Kan blive billigere', 'Følger markedsrenten']
-    },
-    {
-      title: 'Afdragsfrit lån',
-      icon: TrendingDown,
-      description: 'Du betaler kun renter i en periode, typisk de første 10 år af lånet.',
-      rate: 'Varierer',
-      stability: 'Medium',
-      risk: 'Medium',
-      color: 'from-orange-500 to-red-600',
-      features: ['Lavere månedlige ydelser', 'Økonomisk fleksibilitet', 'Maksimalt 10 år']
-    }
-  ]
-
-  // Calculator logic
-  useEffect(() => {
-    const calculateMortgage = () => {
-      const principal = loanAmount
-      const monthlyRate = interestRate / 100 / 12
-      const totalMonths = loanTerm * 12
-      
-      if (isInterestOnly) {
-        // Interest-only period calculation
-        const interestOnlyMonths = interestOnlyPeriod * 12
-        const remainingMonths = totalMonths - interestOnlyMonths
-        
-        const interestOnlyPayment = principal * monthlyRate
-        
-        if (remainingMonths > 0) {
-          const principalAndInterestPayment = (principal * monthlyRate * Math.pow(1 + monthlyRate, remainingMonths)) / 
-                                            (Math.pow(1 + monthlyRate, remainingMonths) - 1)
-          
-          const totalInterestOnlyPayments = interestOnlyPayment * interestOnlyMonths
-          const totalPrincipalInterestPayments = principalAndInterestPayment * remainingMonths
-          
-          setMonthlyPayment(interestOnlyPayment) // Show interest-only payment initially
-          setTotalCost(totalInterestOnlyPayments + totalPrincipalInterestPayments)
-          setTotalInterest(totalInterestOnlyPayments + totalPrincipalInterestPayments - principal)
-        } else {
-          setMonthlyPayment(interestOnlyPayment)
-          setTotalCost(interestOnlyPayment * totalMonths)
-          setTotalInterest(interestOnlyPayment * totalMonths - principal)
-        }
-      } else {
-        // Standard calculation
-        if (monthlyRate === 0) {
-          const payment = principal / totalMonths
-          setMonthlyPayment(payment)
-          setTotalCost(principal)
-          setTotalInterest(0)
-        } else {
-          const payment = (principal * monthlyRate * Math.pow(1 + monthlyRate, totalMonths)) / 
-                         (Math.pow(1 + monthlyRate, totalMonths) - 1)
-          const totalPayments = payment * totalMonths
-          
-          setMonthlyPayment(payment)
-          setTotalCost(totalPayments)
-          setTotalInterest(totalPayments - principal)
-        }
-      }
-    }
-
-    calculateMortgage()
-  }, [loanAmount, interestRate, loanTerm, isInterestOnly, interestOnlyPeriod])
-
-  // Comparison data
-  const loanComparison = [
-    {
-      type: 'Kreditforeningslån',
-      icon: Building2,
-      rate: '1-4%',
-      term: '10-30 år',
-      amount: '500K-50M kr',
-      loanToValue: 'Op til 80%',
-      setupCost: 'Høj',
-      color: 'from-blue-500 to-indigo-600'
-    },
-    {
-      type: 'Banklån',
-      icon: Banknote,
-      rate: '4-8%',
-      term: '5-20 år',
-      amount: '100K-10M kr',
-      loanToValue: 'Op til 85%',
-      setupCost: 'Lav',
-      color: 'from-green-500 to-emerald-600'
-    }
-  ]
-
-  // FAQ data
   const faqs = [
-    {
-      question: 'Hvad er forskellen på kreditforeningslån og banklån til boligkøb?',
-      answer: 'Kreditforeningslån har typisk lavere renter (1-4%) men højere oprettelsesomkostninger. Banklån har højere renter (4-8%) men lavere oprettelsesgebyrer. Kreditforeningslån finansieres gennem obligationer, mens banklån kommer direkte fra bankens kapital.'
-    },
-    {
-      question: 'Hvor meget kan jeg låne med et kreditforeningslån?',
-      answer: 'Du kan typisk låne op til 80% af boligens værdi med et kreditforeningslån. De resterende 20% skal finansieres gennem egenkapital eller eventuelt et supplerende banklån.'
-    },
-    {
-      question: 'Hvad er fordelen ved afdragsfrihed?',
-      answer: 'Afdragsfrihed giver lavere månedlige ydelser i starten, hvilket kan give økonomisk luft. Dog betaler du kun renter, så gælden reduceres ikke. Efter afdragsfri periode bliver de månedlige ydelser højere.'
-    },
-    {
-      question: 'Kan jeg konvertere mit kreditforeningslån?',
-      answer: 'Ja, fastforrentede kreditforeningslån kan konverteres til en lavere rente, hvis markedsrenten falder. Dette koster typisk 1-2% af lånebeløbet, men kan spare dig for mange penge over lånets løbetid.'
-    },
-    {
-      question: 'Hvilke omkostninger er der ved at oprette et kreditforeningslån?',
-      answer: 'Oprettelsesomkostninger inkluderer tinglysningsafgift (1,7% + 1.750 kr), kurstab (0,5-2%), administrationsbidrag og eventuelle gebyrer. Samlet set regn med 2-4% af lånebeløbet i oprettelsesomkostninger.'
-    }
+    { question: 'Hvad er kursgevinst ved indfrielse af realkreditlån?', answer: 'Kursgevinst opstår, når du indfrier dit realkreditlån til en kurs, der er lavere end den kurs, du oprindeligt optog lånet til. Hvis du f.eks. optog et lån, da kursen var 98, og renten siden er steget, kan kursen på dine obligationer være faldet til eksempelvis 85. Du kan nu "købe din gæld tilbage" til kurs 85 i stedet for kurs 100, og dermed reducere din restgæld med 15%. I Danmark er denne gevinst skattefri for private boligejere — et unikt træk ved det danske realkreditsystem.' },
+    { question: 'Hvornår kan det betale sig at omlægge sit boliglån?', answer: 'Omlægning kan betale sig i to scenarier. Ved opkonvertering (når renten stiger) kan du reducere din restgæld ved at købe dine obligationer billigere tilbage. Ved nedkonvertering (når renten falder) kan du sikre en lavere månedlig ydelse. Som tommelfingerregel bør renteforskellen være mindst 0,5-1 procentpoint for at dække omlægningsomkostningerne, typisk 5.000-15.000 kr. Kontakt altid din bank eller en uafhængig vejleder for en konkret beregning.' },
+    { question: 'Hvad er forskellen på fast og variabel rente?', answer: 'Et fastforrentet lån (typisk F30) giver dig en fast rente i hele lånets løbetid. Du kender din præcise ydelse fra dag ét, men betaler en præmie for sikkerheden. Variabelt forrentede lån (F-kort, F1, F3, F5) tilpasser renten ved hvert rentetilpasningsinterval. Du får typisk en lavere startrente, men påtager dig risikoen for, at renten stiger ved næste tilpasning.' },
+    { question: 'Hvor meget kan jeg låne til bolig?', answer: 'Du kan som udgangspunkt belåne op til 80% af boligens værdi med realkreditlån. De resterende 20% dækkes typisk af udbetaling og eventuelt banklån. Din personlige lånekapacitet afhænger af husstandens indkomst, eksisterende gæld, og din boligsituation. Finanstilsynet anbefaler, at din samlede gæld ikke overstiger 4 gange din årlige bruttoindkomst.' },
+    { question: 'Hvad er afdragsfrihed, og hvornår er det en god idé?', answer: 'Afdragsfrihed betyder, at du i en periode (typisk op til 10 år) kun betaler renter og bidrag, men ikke afdrager på selve lånet. Din restgæld forbliver uændret. Det kan give råderum i perioder med stram økonomi, men det forlænger den samlede tilbagebetalingsperiode og øger de totale renteudgifter. Afdragsfrihed bør ses som et midlertidigt værktøj, ikke en permanent løsning.' },
   ]
 
-  const formatCurrency = (value) => {
-    return new Intl.NumberFormat('da-DK', {
-      style: 'currency',
-      currency: 'DKK',
-      maximumFractionDigits: 0,
-    }).format(value)
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(f => ({
+      "@type": "Question",
+      "name": f.question,
+      "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+    }))
   }
 
-  const formatPercentage = (value) => {
-    return `${value.toFixed(1)}%`
-  }
+  const toc = [
+    { id: 'hvad-er-boliglaan', label: 'Hvad er et boliglån?' },
+    { id: 'realkreditlaan', label: 'Realkreditlån: Den danske model' },
+    { id: 'obligationer', label: 'Obligationer, kurser og kurstab' },
+    { id: 'laanetyper', label: 'Sammenligning: F-kort, F5 og Fastrente' },
+    { id: 'konvertering', label: 'Aktiv gældspleje og konvertering' },
+    { id: 'kursgevinst', label: 'Skattefri kursgevinster' },
+    { id: 'realkreditlaan-vs-banklaan', label: 'Realkreditlån vs. Banklån' },
+    { id: 'beregner', label: 'Beregn dit boliglån' },
+    { id: 'faq', label: 'Ofte stillede spørgsmål' },
+  ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Header />
-      
-      {/* Hero Section - Mobile Optimized */}
+
+      {/* FAQ Schema JSON-LD */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+
+      {/* HERO */}
       <section className="relative pt-20 sm:pt-32 pb-16 sm:pb-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-indigo-900 to-slate-900"></div>
-        
-        {/* Background elements - smaller on mobile */}
-        <div className="absolute top-10 sm:top-20 left-4 sm:left-10 w-12 h-12 sm:w-20 sm:h-20 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full blur-xl opacity-40 animate-pulse"></div>
-        <div className="absolute top-20 sm:top-40 right-8 sm:right-20 w-16 h-16 sm:w-32 sm:h-32 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full blur-2xl opacity-30 animate-bounce" style={{animationDuration: '3s'}}></div>
-        <div className="absolute bottom-10 sm:bottom-20 left-1/4 w-8 h-8 sm:w-16 sm:h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-lg opacity-35 animate-pulse" style={{animationDelay: '1s'}}></div>
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
-          <div className="mx-auto max-w-6xl text-center">
-            {/* Badge - mobile friendly */}
-            <div className="mb-8 sm:mb-12 inline-flex items-center gap-2 sm:gap-4 bg-blue-600/20 backdrop-blur-2xl px-4 py-2 sm:px-8 sm:py-4 rounded-full shadow-2xl border border-blue-400/20">
-              <Building2 className="h-4 w-4 sm:h-6 sm:w-6 text-blue-300" />
-              <span className="text-white font-bold text-sm sm:text-lg">Kreditforeningslån - Boligfinansiering</span>
-            </div>
-            
-            {/* Main headline - responsive text sizes */}
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black tracking-tight mb-6 sm:mb-8 leading-tight">
-              <span className="inline-block bg-gradient-to-r from-white via-blue-100 to-indigo-100 bg-clip-text text-transparent">
-                Danmarks billigste 
-              </span>
-              <br />
-              <span className="inline-block bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                boliglån
-              </span>
-            </h1>
-            
-            {/* Subtext - mobile friendly */}
-            <p className="mx-auto max-w-4xl text-lg sm:text-2xl lg:text-3xl leading-relaxed text-blue-100 mb-12 sm:mb-16 font-light px-4">
-              Finansier din <span className="font-black text-white">drømmeBolig</span> med lån fra 
-              <span className="font-black text-blue-300"> 1% i rente</span>
-              <br />
-              <span className="text-sm sm:text-lg text-blue-300 mt-2 sm:mt-4 block">
-                Sammenlign kreditforeningslån og find de bedste vilkår til dit boligkøb
-              </span>
-            </p>
-            
-            {/* CTA buttons - mobile stack */}
-            <div className="flex flex-col items-center justify-center gap-6 sm:gap-8 mb-12 sm:mb-20 px-4">
-              <a
-                href="#calculator"
-                className="w-full sm:w-auto relative inline-flex items-center justify-center gap-2 sm:gap-4 rounded-full bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 px-6 sm:px-12 py-4 sm:py-6 text-lg sm:text-2xl font-black text-white shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                <Building2 className="h-5 w-5 sm:h-7 sm:w-7" />
-                <span>Beregn dit boliglån</span>
-                <ArrowRight className="h-5 w-5 sm:h-7 sm:w-7" />
-              </a>
-              
-              <a
-                href="#calculator"
-                className="inline-flex items-center gap-2 sm:gap-4 text-lg sm:text-2xl font-bold text-white hover:text-blue-300 transition-colors duration-300"
-              >
-                <div className="h-12 w-12 sm:h-16 sm:w-16 rounded-full bg-blue-600/20 backdrop-blur-2xl shadow-2xl flex items-center justify-center hover:bg-blue-600/30 border border-blue-400/20">
-                  <Calculator className="h-6 w-6 sm:h-8 sm:w-8" />
-                </div>
-                <span>Beregn dit boliglån</span>
-              </a>
-            </div>
-
-            {/* Quick stats - mobile grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto px-4">
-              <div className="bg-blue-600/20 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-blue-400/20">
-                <div className="text-2xl sm:text-4xl font-black text-blue-300 mb-2">1-4%</div>
-                <div className="text-white font-semibold text-sm sm:text-base">Årlig rente</div>
-                <div className="text-blue-300 text-xs sm:text-sm">Markedets laveste</div>
-              </div>
-              
-              <div className="bg-indigo-600/20 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-indigo-400/20">
-                <div className="text-2xl sm:text-4xl font-black text-indigo-300 mb-2">80%</div>
-                <div className="text-white font-semibold text-sm sm:text-base">Belåningsgrad</div>
-                <div className="text-indigo-300 text-xs sm:text-sm">Af boligens værdi</div>
-              </div>
-              
-              <div className="bg-cyan-600/20 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-cyan-400/20">
-                <div className="text-2xl sm:text-4xl font-black text-cyan-300 mb-2">30 år</div>
-                <div className="text-white font-semibold text-sm sm:text-base">Løbetid</div>
-                <div className="text-cyan-300 text-xs sm:text-sm">Op til 30 år</div>
-              </div>
-            </div>
+        <div className="absolute top-20 left-10 w-24 h-24 bg-blue-400/30 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-indigo-400/20 rounded-full blur-2xl"></div>
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage:'radial-gradient(circle at 1px 1px,rgba(255,255,255,0.15) 1px,transparent 0)',backgroundSize:'50px 50px'}}></div>
+        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 z-10 text-center">
+          <div className="mb-8 inline-flex items-center gap-3 bg-blue-600/20 backdrop-blur-2xl px-5 py-2 rounded-full border border-blue-400/20">
+            <Building2 className="h-5 w-5 text-blue-300" />
+            <span className="text-white font-bold text-sm">Dybdegående vejledning om boligfinansiering</span>
+          </div>
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
+            <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">Boliglån: Alt du skal vide om</span><br/>
+            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent">finansiering af bolig</span>
+          </h1>
+          <p className="mx-auto max-w-3xl text-lg sm:text-xl leading-relaxed text-blue-100 mb-10 font-light">
+            Forstå realkreditlån, obligationer, kurser, konvertering og skattefri kursgevinster. Din komplette guide til den danske boligfinansieringsmodel.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+            <a href="#hvad-er-boliglaan" className="inline-flex items-center gap-3 rounded-full bg-gradient-to-r from-green-600 to-teal-600 px-8 py-4 text-lg font-bold text-white shadow-2xl hover:scale-105 transition-all w-full sm:w-auto justify-center">
+              <BookOpen className="h-5 w-5" />Læs guiden
+            </a>
+            <a href="#beregner" className="inline-flex items-center gap-3 text-lg font-bold text-white hover:text-blue-300 transition-colors">
+              <div className="h-12 w-12 rounded-full bg-blue-600/20 flex items-center justify-center border border-blue-400/20"><Calculator className="h-6 w-6" /></div>
+              Beregn dit boliglån
+            </a>
           </div>
         </div>
       </section>
 
-      {/* What is a mortgage association loan - Mobile Optimized */}
-      <section className="py-16 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8">
-              <span className="bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
-                Hvad er kreditforeningslån?
-              </span>
-            </h2>
-            <p className="text-lg sm:text-xl text-slate-600 leading-relaxed px-4">
-              Danmarks mest udbredte finansieringsform til boligkøb med de laveste renter på markedet
-            </p>
-          </div>
+      {/* TABLE OF CONTENTS */}
+      <nav className="py-8 sm:py-12 bg-white border-b border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-xl sm:text-2xl font-black text-slate-900 mb-6 flex items-center gap-3">
+            <BookOpen className="h-6 w-6 text-blue-600" />Indholdsfortegnelse
+          </h2>
+          <ol className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {toc.map((item, i) => (
+              <li key={i}><a href={`#${item.id}`} className="flex items-center gap-3 p-3 rounded-xl hover:bg-blue-50 transition-colors group">
+                <span className="flex-shrink-0 h-7 w-7 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-sm font-bold group-hover:bg-blue-600 group-hover:text-white transition-colors">{i + 1}</span>
+                <span className="text-slate-700 font-semibold text-sm sm:text-base group-hover:text-blue-700 transition-colors">{item.label}</span>
+              </a></li>
+            ))}
+          </ol>
+        </div>
+      </nav>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-16 items-center">
-            <div className="space-y-6 sm:space-y-8 px-4">
-              <div className="prose prose-lg sm:prose-xl">
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6">
-                  Et kreditforeningslån er en særlig dansk finansieringsform, hvor du låner penge til at købe 
-                  fast ejendom gennem et <strong className="text-blue-600">realkreditinstitut</strong>. 
-                  Lånet sikres med pant i din bolig.
+      {/* ARTICLE */}
+      <article className="py-12 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+
+          {/* Section 1: Hvad er boliglån */}
+          <section className="mb-14" id="hvad-er-boliglaan">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg flex-shrink-0"><Building2 className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Hvad er et boliglån?</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Et boliglån er ikke bare et lån — det er en strategisk beslutning, der påvirker din økonomi i årtier. I Danmark har vi et af verdens mest sofistikerede boligfinansieringssystemer, bygget op omkring realkreditmodellen. Denne model giver danske boligejere adgang til lån med lave renter, lang løbetid og unikke muligheder for aktiv gældspleje.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Når vi taler om boliglån i Danmark, dækker det typisk over to dele: et realkreditlån (op til 80% af boligens værdi) og eventuelt et supplerende banklån for de resterende procent. Det er realkreditlånet, der udgør fundamentet, og det er her, de store besparelser — og muligheder — ligger.
+            </p>
+
+            <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200 mb-6">
+              <h3 className="font-bold text-blue-900 text-lg mb-3">Boliglånets to dele</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-white rounded-xl p-4 border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2"><Lock className="h-5 w-5 text-blue-600" /><h4 className="font-bold text-slate-900">Realkreditlån (op til 80%)</h4></div>
+                  <p className="text-sm text-slate-600">Lav rente, lang løbetid (op til 30 år), finansieret via obligationer. Sikkerhed i boligen.</p>
+                </div>
+                <div className="bg-white rounded-xl p-4 border border-blue-100">
+                  <div className="flex items-center gap-2 mb-2"><Banknote className="h-5 w-5 text-indigo-600" /><h4 className="font-bold text-slate-900">Banklån (op til 15%)</h4></div>
+                  <p className="text-sm text-slate-600">Højere rente, kortere løbetid, supplerer realkreditlånet. Varierer fra bank til bank.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 2: Realkreditlån */}
+          <section className="mb-14" id="realkreditlaan">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center shadow-lg flex-shrink-0"><Shield className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Realkreditlån: Den danske model</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Kernen i dansk boligfinansiering er realkreditlånet, som finansieres gennem salg af obligationer. Systemet fungerer som en formidlingsmodel: realkreditinstituttet (f.eks. Nykredit, Realkredit Danmark eller Jyske Realkredit) agerer formidler mellem dig som låntager og investorer på obligationsmarkedet.
+            </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Når du optager et realkreditlån, sælger kreditforeningen obligationer på dine vegne. De penge, investorerne betaler for obligationerne, er dem, du modtager som lån. Til gengæld betaler du renter og afdrag, der sendes videre til investorerne. Det er dette direkte link mellem kapitalmarked og boligejer, der gør danske realkreditlån til nogle af de billigste i verden.
+            </p>
+
+            <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 sm:p-8 border border-green-200">
+              <h3 className="text-xl font-black text-green-900 mb-4">Sådan fungerer realkreditmodellen</h3>
+              <div className="space-y-4">
+                {[
+                  { step: '1', title: 'Du ansøger om lån', desc: 'Du kontakter et realkreditinstitut og ansøger om et lån med sikkerhed i din bolig.' },
+                  { step: '2', title: 'Obligationer udstedes', desc: 'Realkreditinstituttet sælger obligationer på kapitalmarkedet med præcis samme vilkår som dit lån (balanceprincippet).' },
+                  { step: '3', title: 'Du modtager lånebeløbet', desc: 'Provenuet fra obligationssalget udbetales til dig. Beløbet afhænger af den aktuelle kurs.' },
+                  { step: '4', title: 'Du betaler ydelse', desc: 'Din månedlige ydelse (rente + afdrag + bidrag) sendes videre til obligationsejerne af kreditforeningen.' },
+                ].map((s, i) => (
+                  <div key={i} className="flex gap-4">
+                    <div className="flex-shrink-0 h-10 w-10 rounded-full bg-green-600 text-white flex items-center justify-center font-black text-lg">{s.step}</div>
+                    <div><h4 className="font-bold text-slate-900">{s.title}</h4><p className="text-slate-600 text-sm">{s.desc}</p></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Section 3: Obligationer og kurser */}
+          <section className="mb-14" id="obligationer">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg flex-shrink-0"><BarChart3 className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Obligationer, kurser og kurstab</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Prisen på de obligationer, der er knyttet til dit lån, kaldes kursen. Kursen svinger i takt med markedsrenten og er afgørende for, hvor meget du reelt får udbetalt, og hvad dine muligheder er for konvertering.
+            </p>
+
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-6 sm:p-8 border border-purple-200 mb-8">
+              <h3 className="text-xl font-black text-purple-900 mb-4">Sådan læses en obligationskurs</h3>
+              <div className="space-y-4">
+                <div className="bg-white rounded-xl p-5 border border-purple-100">
+                  <div className="flex items-center gap-3 mb-2"><div className="h-8 w-8 rounded-lg bg-green-100 flex items-center justify-center"><CheckCircle className="h-5 w-5 text-green-600" /></div><h4 className="font-bold text-slate-900">Kurs 100 (pari)</h4></div>
+                  <p className="text-slate-600">Du får 1 krone udbetalt for hver krone, du låner. Intet kurstab.</p>
+                </div>
+                <div className="bg-white rounded-xl p-5 border border-purple-100">
+                  <div className="flex items-center gap-3 mb-2"><div className="h-8 w-8 rounded-lg bg-yellow-100 flex items-center justify-center"><TrendingDown className="h-5 w-5 text-yellow-600" /></div><h4 className="font-bold text-slate-900">Kurs 98</h4></div>
+                  <p className="text-slate-600">Du får 98 øre udbetalt for hver krone, du skylder. Kurstabet er 2%. Ved et lån på 2.000.000 kr. mister du 40.000 kr. i kurstab.</p>
+                </div>
+                <div className="bg-white rounded-xl p-5 border border-purple-100">
+                  <div className="flex items-center gap-3 mb-2"><div className="h-8 w-8 rounded-lg bg-red-100 flex items-center justify-center"><TrendingDown className="h-5 w-5 text-red-600" /></div><h4 className="font-bold text-slate-900">Kurs 85</h4></div>
+                  <p className="text-slate-600">Du får kun 85 øre per krone. Kurstabet er 15%. Men her opstår en mulighed: Er det dine egne obligationer, kan du købe dem billigt tilbage (opkonvertering).</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-indigo-50 rounded-2xl p-5 border border-indigo-200">
+              <p className="text-indigo-900 font-medium"><strong>Husk:</strong> Der er en omvendt sammenhæng mellem markedsrenten og obligationskurser. Når renten stiger, falder kurserne — og omvendt. Denne mekanik er fundamentet for aktiv gældspleje via konvertering.</p>
+            </div>
+          </section>
+
+          {/* Section 4: Sammenligningstabel */}
+          <section className="mb-14" id="laanetyper">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg flex-shrink-0"><Percent className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Sammenligning: F-kort, F5 og Fastrente</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Valget af lånetype er en af de vigtigste beslutninger ved boligfinansiering. Herunder sammenligner vi de tre mest almindelige lånetyper på de parametre, der betyder mest for din økonomi og risikoprofil.
+            </p>
+
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-lg">
+                <thead>
+                  <tr className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+                    <th className="text-left p-4 font-bold text-sm">Parameter</th>
+                    <th className="text-center p-4 font-bold text-sm">F-kort (variabel)</th>
+                    <th className="text-center p-4 font-bold text-sm">F5 (5-årig tilpasning)</th>
+                    <th className="text-center p-4 font-bold text-sm">Fastrente (30 år)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { param: 'Renterisiko', fkort: 'Høj — tilpasses løbende', f5: 'Middel — tilpasses hvert 5. år', fast: 'Ingen — fast i hele perioden' },
+                    { param: 'Startrente (typisk)', fkort: 'Lavest', f5: 'Mellem', fast: 'Højest' },
+                    { param: 'Kursfølsomhed', fkort: 'Lav (kurs tæt på 100)', f5: 'Middel', fast: 'Høj (store kursudsving)' },
+                    { param: 'Konverteringsmulighed', fkort: 'Begrænset', f5: 'Ved refinansiering', fast: 'Fuld (op- og nedkonvertering)' },
+                    { param: 'Afdragsfrihed', fkort: 'Muligt (op til 10 år)', f5: 'Muligt (op til 10 år)', fast: 'Muligt (op til 10 år)' },
+                    { param: 'Bedst egnet til', fkort: 'Kort tidshorisont, risikovillig', f5: 'Mellemlang horisont, balanceret', fast: 'Lang horisont, sikkerhed vigtigt' },
+                  ].map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? 'bg-slate-50' : 'bg-white'}>
+                      <td className="p-4 font-bold text-sm text-slate-900 border-b border-slate-100">{row.param}</td>
+                      <td className="p-4 text-center text-sm text-slate-600 border-b border-slate-100">{row.fkort}</td>
+                      <td className="p-4 text-center text-sm text-slate-600 border-b border-slate-100">{row.f5}</td>
+                      <td className="p-4 text-center text-sm text-slate-600 border-b border-slate-100">{row.fast}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="bg-amber-50 rounded-2xl p-5 border border-amber-200">
+              <p className="text-amber-900 font-medium"><strong>Vigtigt:</strong> Tabellen viser generelle tendenser. Den faktiske rente og de præcise vilkår afhænger af realkreditinstitut, belåningsgrad, boligens placering og din personlige kreditvurdering. Indhent altid konkrete tilbud.</p>
+            </div>
+          </section>
+
+          {/* Section 5: Konvertering */}
+          <section className="mb-14" id="konvertering">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg flex-shrink-0"><RefreshCw className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Aktiv gældspleje og konvertering</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Et af de mest kraftfulde værktøjer for danske boligejere er muligheden for at konvertere sit realkreditlån. Konvertering er i praksis en omlægning, hvor du indfrier dit eksisterende lån og optager et nyt — men med strategisk timing kan det spare dig hundredtusinder af kroner.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              {/* Opkonvertering */}
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 border border-green-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-green-600 flex items-center justify-center"><TrendingUp className="h-5 w-5 text-white" /></div>
+                  <h3 className="text-xl font-black text-green-900">Opkonvertering</h3>
+                </div>
+                <p className="text-sm text-slate-700 mb-3"><strong>Scenarie:</strong> Renten stiger</p>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Når markedsrenten stiger, falder kursen på dine eksisterende obligationer. Du kan nu indfri dit lån ved at købe obligationerne billigere tilbage end den gæld, de repræsenterer. Resultatet er en reduktion af din restgæld.
                 </p>
-                <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-                  Systemet fungerer ved at realkreditinstituttet udsteder <strong className="text-blue-600">obligationer</strong> 
-                  som investorer køber. Dette gør kreditforeningslån til verdens billigste boligfinansiering.
+                <div className="bg-white rounded-xl p-4 border border-green-100 mb-3">
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong className="text-green-800">Eksempel:</strong> Du har et lån med en restgæld på 2.000.000 kr. Renten stiger, og kursen falder til 85. Du kan nu indfri din gæld for 1.700.000 kr. — en besparelse på 300.000 kr. på restgælden.</p>
+                </div>
+                <div className="bg-amber-50 rounded-xl p-3 border border-amber-200">
+                  <p className="text-xs text-amber-900"><strong>Vigtigt at vide:</strong> Ved opkonvertering reducerer du restgælden, men du accepterer til gengæld en højere rente på det nye lån. Det er denne balance, der afgør, om opkonverteringen er fordelagtig.</p>
+                </div>
+              </div>
+
+              {/* Nedkonvertering */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-10 w-10 rounded-xl bg-blue-600 flex items-center justify-center"><TrendingDown className="h-5 w-5 text-white" /></div>
+                  <h3 className="text-xl font-black text-blue-900">Nedkonvertering</h3>
+                </div>
+                <p className="text-sm text-slate-700 mb-3"><strong>Scenarie:</strong> Renten falder</p>
+                <p className="text-slate-700 leading-relaxed mb-4">
+                  Når markedsrenten falder, indfrier du dit lån til kurs 100 (du skylder stadig det fulde beløb) og optager et nyt lån til en lavere rente. Resultatet er en lavere månedlig ydelse.
                 </p>
-              </div>
-              
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 sm:p-8 rounded-3xl border border-blue-200">
-                <h3 className="font-black text-xl sm:text-2xl text-blue-900 mb-4 sm:mb-6 flex items-center gap-3">
-                  <Lightbulb className="h-5 w-5 sm:h-7 sm:w-7 text-blue-600" />
-                  Sådan fungerer det
-                </h3>
-                <ul className="space-y-3 sm:space-y-4">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700 text-sm sm:text-base"><strong>Vurdering:</strong> Boligen vurderes af realkreditinstituttet</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700 text-sm sm:text-base"><strong>Belåning:</strong> Du kan låne op til 80% af boligens værdi</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700 text-sm sm:text-base"><strong>Obligationer:</strong> Lånet finansieres gennem obligationsudstedelse</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 mt-1 flex-shrink-0" />
-                    <span className="text-slate-700 text-sm sm:text-base"><strong>Sikkerhed:</strong> Boligen er pant for lånet</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="relative px-4 lg:px-0">
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-3xl p-8 sm:p-12 shadow-2xl text-white relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-20 h-20 sm:w-32 sm:h-32 bg-white/10 rounded-full blur-2xl"></div>
-                <div className="relative">
-                  <Building2 className="h-12 w-12 sm:h-16 sm:w-16 text-white mb-6 sm:mb-8" />
-                  <h3 className="text-2xl sm:text-3xl font-black mb-4 sm:mb-6">Hvorfor vælge kreditforeningslån?</h3>
-                  <ul className="space-y-3 sm:space-y-4">
-                    <li className="flex items-center gap-3">
-                      <TrendingDown className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Laveste renter på markedet</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Clock className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Op til 30 års løbetid</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <LineChart className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Mulighed for konvertering</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Shield className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Stabil dansk finansiering</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Target className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                      <span className="text-sm sm:text-base">Fleksible afbetalingsmuligheder</span>
-                    </li>
-                  </ul>
+                <div className="bg-white rounded-xl p-4 border border-blue-100 mb-3">
+                  <p className="text-sm text-slate-700 leading-relaxed"><strong className="text-blue-800">Eksempel:</strong> Du har et 4% fastforrentet lån. Renten falder til 2%. Du indfrier det gamle lån til kurs 100 og optager et nyt til 2% — din månedlige ydelse falder markant, typisk tusinder af kroner.</p>
+                </div>
+                <div className="bg-amber-50 rounded-xl p-3 border border-amber-200">
+                  <p className="text-xs text-amber-900"><strong>Vigtigt at vide:</strong> Ved nedkonvertering beholder du samme restgæld (eller lidt højere pga. kurstab), men opnår en lavere rente. Omkostningerne til omlægning skal modregnes besparelsen.</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Loan types - Mobile Optimized */}
-      <section className="py-16 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8">
-              <span className="bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
-                Typer af kreditforeningslån
-              </span>
-            </h2>
-            <p className="text-lg sm:text-xl text-slate-600 px-4">
-              Vælg den lånetype der passer bedst til din situation og risikovillighed
+          {/* Section 6: Kursgevinster */}
+          <section className="mb-14" id="kursgevinst">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center shadow-lg flex-shrink-0"><Coins className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Skattefri kursgevinster — unikt for Danmark</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Et af de mest attraktive træk ved det danske realkreditsystem er, at kursgevinster ved indfrielse af realkreditlån er skattefrie for private boligejere. Det betyder, at den gevinst, du opnår ved at købe dine obligationer billigere tilbage (opkonvertering), ikke beskattes.
             </p>
-          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {loanTypes.map((loanType, index) => {
-              const IconComponent = loanType.icon
-              return (
-                <div
-                  key={index}
-                  className="group bg-white/80 backdrop-blur-xl rounded-3xl p-6 sm:p-8 shadow-2xl border border-white/20 hover:shadow-2xl hover:scale-105 transition-all duration-500"
-                >
-                  <div className={`inline-flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center rounded-3xl bg-gradient-to-r ${loanType.color} mb-6 sm:mb-8 shadow-2xl group-hover:scale-110 transition-all duration-500`}>
-                    <IconComponent className="h-6 w-6 sm:h-8 sm:w-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-3 sm:mb-4">{loanType.title}</h3>
-                  <p className="text-slate-600 mb-6 sm:mb-8 leading-relaxed text-sm sm:text-base">{loanType.description}</p>
-                  
-                  <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Rente:</span>
-                      <span className="font-black text-slate-900">{loanType.rate}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Stabilitet:</span>
-                      <span className="font-black text-slate-900">{loanType.stability}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Risiko:</span>
-                      <span className="font-black text-slate-900">{loanType.risk}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2 sm:space-y-3">
-                    {loanType.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center gap-3">
-                        <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 text-green-600 flex-shrink-0" />
-                        <span className="text-xs sm:text-sm font-medium text-slate-700">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-6 sm:p-8 border border-yellow-200 mb-6">
+              <h3 className="text-xl font-black text-orange-900 mb-4">Eksempel på skattefri kursgevinst</h3>
+              <div className="space-y-3">
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 h-6 w-6 rounded-full bg-orange-200 text-orange-800 flex items-center justify-center text-xs font-bold">1</span>
+                  <p className="text-slate-700">Du optager et lån på 2.000.000 kr. til kurs 98 (kurstab: 40.000 kr.)</p>
                 </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Mortgage Calculator - HEAVILY MOBILE OPTIMIZED */}
-      <section className="py-16 sm:py-32 relative overflow-hidden" id="calculator">
-        <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-blue-900 to-slate-900"></div>
-        
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center mb-12 sm:mb-20">
-            <div className="mb-6 sm:mb-8 inline-flex items-center gap-2 sm:gap-4 bg-blue-600/20 backdrop-blur-2xl px-4 py-2 sm:px-8 sm:py-4 rounded-full border border-blue-400/20">
-              <Calculator className="h-5 w-5 sm:h-7 sm:w-7 text-blue-400" />
-              <span className="font-black text-white text-sm sm:text-xl">Boliglån Beregner</span>
-            </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 sm:mb-8">
-              Beregn dit
-              <br />
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
-                perfekte boliglån
-              </span>
-            </h2>
-            <p className="text-lg sm:text-2xl text-blue-100 font-light leading-relaxed px-4">
-              Se præcis hvad dit kreditforeningslån vil koste med vores avancerede beregner
-            </p>
-          </div>
-          
-          <div className="relative overflow-hidden bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl shadow-2xl p-4 sm:p-8 lg:p-16 max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16">
-              {/* Input Section - Mobile Optimized */}
-              <div className="space-y-8 sm:space-y-12">
-                <div className="text-center lg:text-left">
-                  <h3 className="text-2xl sm:text-3xl font-black text-white mb-3 sm:mb-4">Beregn dit lån</h3>
-                  <p className="text-blue-200 text-sm sm:text-base">Juster værdierne og se øjeblikkeligt resultatet</p>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 h-6 w-6 rounded-full bg-orange-200 text-orange-800 flex items-center justify-center text-xs font-bold">2</span>
+                  <p className="text-slate-700">Renten stiger markant, og kursen på dine obligationer falder til 80</p>
                 </div>
-
-                {/* Loan Amount Slider */}
-                <div className="relative group">
-                  <label className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-lg sm:text-xl font-black text-white mb-4 sm:mb-6">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-500 flex items-center justify-center shadow-2xl mx-auto sm:mx-0">
-                      <Coins className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
-                    </div>
-                    <span className="text-center sm:text-left">Lånebeløb: {formatCurrency(loanAmount)}</span>
-                  </label>
-                  
-                  <input
-                    type="range"
-                    min="100000"
-                    max="10000000"
-                    step="50000"
-                    value={loanAmount}
-                    onChange={(e) => setLoanAmount(Number(e.target.value))}
-                    className="w-full h-4 sm:h-6 bg-white/20 rounded-full appearance-none cursor-pointer backdrop-blur-sm slider"
-                    style={{
-                      background: `linear-gradient(to right, #3b82f6 0%, #6366f1 ${((loanAmount - 100000) / 9900000) * 100}%, rgba(255,255,255,0.2) ${((loanAmount - 100000) / 9900000) * 100}%, rgba(255,255,255,0.2) 100%)`
-                    }}
-                  />
-                  <div className="flex justify-between text-xs sm:text-sm text-blue-300 mt-2 sm:mt-4 font-semibold">
-                    <span>100K</span>
-                    <span>10M</span>
-                  </div>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 h-6 w-6 rounded-full bg-orange-200 text-orange-800 flex items-center justify-center text-xs font-bold">3</span>
+                  <p className="text-slate-700">Du indfrier ved at købe obligationerne til kurs 80: 2.000.000 × 0,80 = 1.600.000 kr.</p>
                 </div>
-
-                {/* Interest Rate Slider */}
-                <div className="relative group">
-                  <label className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-lg sm:text-xl font-black text-white mb-4 sm:mb-6">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center shadow-2xl mx-auto sm:mx-0">
-                      <TrendingUp className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
-                    </div>
-                    <span className="text-center sm:text-left">Årlig rente: {formatPercentage(interestRate)}</span>
-                  </label>
-                  
-                  <input
-                    type="range"
-                    min="0.5"
-                    max="8"
-                    step="0.1"
-                    value={interestRate}
-                    onChange={(e) => setInterestRate(Number(e.target.value))}
-                    className="w-full h-4 sm:h-6 bg-white/20 rounded-full appearance-none cursor-pointer backdrop-blur-sm slider"
-                    style={{
-                      background: `linear-gradient(to right, #10b981 0%, #059669 ${((interestRate - 0.5) / 7.5) * 100}%, rgba(255,255,255,0.2) ${((interestRate - 0.5) / 7.5) * 100}%, rgba(255,255,255,0.2) 100%)`
-                    }}
-                  />
-                  <div className="flex justify-between text-xs sm:text-sm text-green-300 mt-2 sm:mt-4 font-semibold">
-                    <span>0.5%</span>
-                    <span>8%</span>
-                  </div>
-                </div>
-
-                {/* Loan Term Slider */}
-                <div className="relative group">
-                  <label className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 text-lg sm:text-xl font-black text-white mb-4 sm:mb-6">
-                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-2xl mx-auto sm:mx-0">
-                      <Clock className="h-5 w-5 sm:h-7 sm:w-7 text-white" />
-                    </div>
-                    <span className="text-center sm:text-left">Løbetid: {loanTerm} år</span>
-                  </label>
-                  
-                  <input
-                    type="range"
-                    min="10"
-                    max="30"
-                    step="1"
-                    value={loanTerm}
-                    onChange={(e) => setLoanTerm(Number(e.target.value))}
-                    className="w-full h-4 sm:h-6 bg-white/20 rounded-full appearance-none cursor-pointer backdrop-blur-sm slider"
-                    style={{
-                      background: `linear-gradient(to right, #8b5cf6 0%, #ec4899 ${((loanTerm - 10) / 20) * 100}%, rgba(255,255,255,0.2) ${((loanTerm - 10) / 20) * 100}%, rgba(255,255,255,0.2) 100%)`
-                    }}
-                  />
-                  <div className="flex justify-between text-xs sm:text-sm text-purple-300 mt-2 sm:mt-4 font-semibold">
-                    <span>10 år</span>
-                    <span>30 år</span>
-                  </div>
-                </div>
-
-                {/* Interest-only toggle - Mobile Optimized */}
-                <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-4 sm:p-6 border border-white/20">
-                  <div className="flex items-center justify-between mb-3 sm:mb-4">
-                    <label className="flex items-center gap-2 sm:gap-3 text-base sm:text-lg font-bold text-white cursor-pointer">
-                      <TrendingDown className="h-5 w-5 sm:h-6 sm:w-6 text-orange-400" />
-                      Afdragsfrihed
-                    </label>
-                    <button
-                      onClick={() => setIsInterestOnly(!isInterestOnly)}
-                      className={`relative inline-flex h-6 w-12 sm:h-8 sm:w-14 items-center rounded-full transition-colors duration-300 ${
-                        isInterestOnly ? 'bg-blue-600' : 'bg-gray-600'
-                      }`}
-                    >
-                      <span
-                        className={`inline-block h-4 w-4 sm:h-6 sm:w-6 transform rounded-full bg-white transition-transform duration-300 ${
-                          isInterestOnly ? 'translate-x-7 sm:translate-x-7' : 'translate-x-1'
-                        }`}
-                      />
-                    </button>
-                  </div>
-                  {isInterestOnly && (
-                    <div>
-                      <label className="block text-white mb-2 text-sm sm:text-base">Afdragsfri periode: {interestOnlyPeriod} år</label>
-                      <input
-                        type="range"
-                        min="1"
-                        max="10"
-                        step="1"
-                        value={interestOnlyPeriod}
-                        onChange={(e) => setInterestOnlyPeriod(Number(e.target.value))}
-                        className="w-full h-3 sm:h-4 bg-white/20 rounded-lg appearance-none cursor-pointer slider"
-                      />
-                      <div className="flex justify-between text-xs text-orange-300 mt-2">
-                        <span>1 år</span>
-                        <span>10 år</span>
-                      </div>
-                    </div>
-                  )}
-                </div>
-              </div>
-
-              {/* Results Section - Mobile Optimized */}
-              <div className="space-y-6 sm:space-y-8">
-                <div className="text-center">
-                  <div className="inline-flex items-center gap-2 sm:gap-4 bg-gradient-to-r from-blue-500/20 to-indigo-500/20 backdrop-blur-xl px-4 py-2 sm:px-8 sm:py-4 rounded-full border border-blue-400/20">
-                    <Sparkles className="h-4 w-4 sm:h-6 sm:w-6 text-blue-400" />
-                    <span className="font-black text-blue-300 text-sm sm:text-xl">Dine resultater</span>
-                  </div>
-                </div>
-                
-                {/* Main result card - Mobile Optimized */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-3xl p-6 sm:p-12 shadow-2xl text-white">
-                  <div className="absolute top-0 right-0 w-16 h-16 sm:w-32 sm:h-32 bg-white/10 rounded-full blur-2xl"></div>
-                  
-                  <div className="relative text-center">
-                    <p className="text-blue-100 text-base sm:text-xl font-bold mb-3 sm:mb-4">
-                      {isInterestOnly ? 'Månedlig ydelse (afdragsfri)' : 'Månedlig ydelse'}
-                    </p>
-                    <p className="text-3xl sm:text-6xl lg:text-7xl font-black mb-4 sm:mb-6 leading-tight">
-                      {formatCurrency(monthlyPayment)}
-                    </p>
-                    <p className="text-blue-100 text-sm sm:text-xl">
-                      pr. måned i {isInterestOnly ? `${interestOnlyPeriod} år (derefter højere)` : `${loanTerm} år`}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Breakdown cards - Mobile Optimized */}
-                <div className="grid grid-cols-1 gap-4 sm:gap-6">
-                  <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-4 sm:p-8 border border-white/20 shadow-2xl">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
-                      <div className="flex items-center gap-2 sm:gap-4">
-                        <BarChart3 className="h-5 w-5 sm:h-6 sm:w-6 text-blue-300" />
-                        <span className="text-white/80 font-bold text-sm sm:text-xl">Samlet tilbagebetaling</span>
-                      </div>
-                      <span className="text-xl sm:text-3xl font-black text-white">
-                        {formatCurrency(totalCost)}
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-4 sm:p-8 border border-white/20 shadow-2xl">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
-                      <div className="flex items-center gap-2 sm:gap-4">
-                        <PieChart className="h-5 w-5 sm:h-6 sm:w-6 text-orange-300" />
-                        <span className="text-white/80 font-bold text-sm sm:text-xl">Samlede renter</span>
-                      </div>
-                      <span className="text-xl sm:text-3xl font-black text-orange-300">
-                        {formatCurrency(totalInterest)}
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="bg-white/10 backdrop-blur-2xl rounded-2xl p-4 sm:p-8 border border-white/20 shadow-2xl">
-                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 sm:gap-0">
-                      <div className="flex items-center gap-2 sm:gap-4">
-                        <Coins className="h-5 w-5 sm:h-6 sm:w-6 text-green-300" />
-                        <span className="text-white/80 font-bold text-sm sm:text-xl">Belåningsgrad</span>
-                      </div>
-                      <span className="text-xl sm:text-3xl font-black text-green-300">
-                        {Math.round((loanAmount / (loanAmount / 0.8)) * 100)}%
-                      </span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* CTA Button - Mobile Optimized */}
-                <div className="pt-4 sm:pt-6">
-                  <a
-                    href="#calculator"
-                    className="group relative overflow-hidden w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-6 sm:py-8 px-6 sm:px-12 rounded-3xl font-black shadow-2xl hover:scale-105 transition-all duration-300 flex items-center justify-center gap-3 sm:gap-6 text-lg sm:text-2xl"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 group-hover:translate-x-full transition-transform duration-700"></div>
-                    <Calculator className="h-6 w-6 sm:h-8 sm:w-8 relative z-10" />
-                    <span className="relative z-10">Beregn dit lån igen</span>
-                    <ArrowRight className="h-6 w-6 sm:h-8 sm:w-8 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
-                  </a>
-                  <p className="text-center text-sm sm:text-lg text-blue-200 mt-4 sm:mt-6 font-semibold px-4">
-                    Gratis sammenligning • Svar på 2 minutter • 50+ udbydere
-                  </p>
+                <div className="flex items-start gap-3">
+                  <span className="flex-shrink-0 h-6 w-6 rounded-full bg-green-200 text-green-800 flex items-center justify-center text-xs font-bold">✓</span>
+                  <p className="text-slate-700"><strong>Kursgevinst: 400.000 kr. — skattefrit.</strong></p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Loan Comparison - Mobile Optimized */}
-      <section className="py-16 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-20">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 px-4">
-              <span className="bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
-                Sammenlign finansieringsmuligheder
-              </span>
-            </h2>
-            <p className="text-lg sm:text-xl text-slate-600 px-4">
-              Se forskellen på kreditforeningslån og traditionelle banklån
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
-            {loanComparison.map((loan, index) => {
-              const IconComponent = loan.icon
-              return (
-                <div key={index} className="bg-white rounded-3xl shadow-2xl border border-gray-200 hover:scale-105 transition-all duration-500 overflow-hidden">
-                  <div className={`bg-gradient-to-r ${loan.color} p-6 sm:p-8 text-white`}>
-                    <div className="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
-                      <IconComponent className="h-6 w-6 sm:h-8 sm:w-8" />
-                      <h3 className="text-xl sm:text-2xl font-black">{loan.type}</h3>
-                    </div>
-                  </div>
-                  
-                  <div className="p-6 sm:p-8 space-y-4 sm:space-y-6">
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Rente:</span>
-                      <span className="font-black text-slate-900 text-lg sm:text-xl">{loan.rate}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Løbetid:</span>
-                      <span className="font-black text-slate-900 text-lg sm:text-xl">{loan.term}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Lånebeløb:</span>
-                      <span className="font-black text-slate-900 text-lg sm:text-xl">{loan.amount}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Belåning:</span>
-                      <span className="font-black text-slate-900 text-lg sm:text-xl">{loan.loanToValue}</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <span className="font-semibold text-slate-600 text-sm sm:text-base">Oprettelse:</span>
-                      <span className="font-black text-slate-900 text-lg sm:text-xl">{loan.setupCost}</span>
-                    </div>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section - Mobile Optimized */}
-      <section className="py-16 sm:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50">
-        <div className="relative mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-20">
-            <div className="mb-6 sm:mb-8 inline-flex items-center gap-2 sm:gap-4 bg-blue-600 text-white px-4 py-2 sm:px-8 sm:py-4 rounded-full shadow-2xl">
-              <BookOpen className="h-4 w-4 sm:h-6 sm:w-6" />
-              <span className="font-black text-sm sm:text-lg">Ofte stillede spørgsmål</span>
+            <div className="bg-green-50 rounded-2xl p-5 border border-green-200">
+              <p className="text-green-900 font-medium"><strong>Lovgrundlag:</strong> Skattefriheden følger af kursgevinstloven, der fritager private boligejere for beskatning af gevinster ved indfrielse af realkreditlån. Det gælder både ved salg af bolig og ved konvertering.</p>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight mb-6 sm:mb-8 px-4">
-              <span className="bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
-                Alt om kreditforeningslån
-              </span>
-            </h2>
+          </section>
+
+          {/* Section 7: Realkredit vs Banklån */}
+          <section className="mb-14" id="realkreditlaan-vs-banklaan">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg flex-shrink-0"><ArrowDownUp className="h-6 w-6 text-white" /></div>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Realkreditlån vs. Banklån</h2>
+            </div>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">
+              Mange boligkøbere bruger begge dele, men det er vigtigt at forstå forskellen, da den har stor betydning for de samlede omkostninger.
+            </p>
+            <div className="overflow-x-auto mb-6">
+              <table className="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-lg">
+                <thead>
+                  <tr className="bg-gradient-to-r from-indigo-600 to-violet-600 text-white">
+                    <th className="text-left p-4 font-bold text-sm">Parameter</th>
+                    <th className="text-center p-4 font-bold text-sm">Realkreditlån</th>
+                    <th className="text-center p-4 font-bold text-sm">Banklån</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { param: 'Belåningsgrad', rk: 'Op til 80%', bank: 'Op til 95% (inkl. realkredit)' },
+                    { param: 'Typisk rente', rk: 'Lav (obligations-baseret)', bank: 'Højere (bankens egen margin)' },
+                    { param: 'Løbetid', rk: 'Op til 30 år', bank: 'Typisk 10-20 år' },
+                    { param: 'Sikkerhed', rk: 'Pant i bolig (1. prioritet)', bank: 'Pant i bolig (2. prioritet)' },
+                    { param: 'Konverteringsmulighed', rk: 'Ja (op/nedkonvertering)', bank: 'Begrænset' },
+                    { param: 'Skattefri kursgevinst', rk: 'Ja', bank: 'Nej' },
+                  ].map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? 'bg-slate-50' : 'bg-white'}>
+                      <td className="p-4 font-bold text-sm text-slate-900 border-b border-slate-100">{row.param}</td>
+                      <td className="p-4 text-center text-sm text-slate-600 border-b border-slate-100">{row.rk}</td>
+                      <td className="p-4 text-center text-sm text-slate-600 border-b border-slate-100">{row.bank}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          {/* Section 8: Beregner teaser */}
+          <section className="mb-14" id="beregner">
+            <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-3xl p-8 sm:p-12 text-white text-center">
+              <div className="mb-6 inline-flex items-center gap-3 bg-white/10 backdrop-blur-2xl px-5 py-2 rounded-full border border-white/20">
+                <Calculator className="h-5 w-5 text-cyan-300" />
+                <span className="font-bold text-sm">Interaktivt værktøj</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black mb-4">Beregn dit boliglån</h2>
+              <p className="text-blue-100 text-lg mb-6 max-w-2xl mx-auto">
+                Brug vores låneberegner på forsiden til at teste, hvad dit boliglån vil koste med forskellige renter og løbetider. Se den reelle månedlige ydelse og samlede renteomkostninger.
+              </p>
+              <p className="text-blue-200 text-sm mb-8">Har du lige læst om ÅOP, kurser og konvertering? Test nu dine nye indsigter med konkrete tal.</p>
+              <Link href="/#calculator" className="inline-flex items-center gap-3 rounded-full bg-white text-blue-700 px-8 py-4 text-lg font-bold shadow-2xl hover:scale-105 transition-all">
+                <Calculator className="h-5 w-5" />Åbn låneberegneren
+                <ArrowRight className="h-5 w-5" />
+              </Link>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      {/* FAQ */}
+      <section className="py-16 sm:py-24 bg-white" id="faq">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-black text-slate-900 mb-4">Ofte stillede spørgsmål om boliglån</h2>
+            <p className="text-lg text-slate-600">Dybdegående svar på de vigtigste spørgsmål om dansk boligfinansiering</p>
           </div>
-          
-          <div className="space-y-4 sm:space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="group bg-white/80 backdrop-blur-xl rounded-3xl shadow-xl border border-white/20 overflow-hidden hover:shadow-2xl hover:scale-[1.02] transition-all duration-500"
-              >
-                <button
-                  className="w-full px-4 py-4 sm:px-8 sm:py-6 text-left flex items-center justify-between hover:bg-blue-50/50 transition-colors duration-300"
-                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                >
-                  <span className="font-bold text-slate-900 text-sm sm:text-lg pr-4 leading-tight group-hover:text-blue-900 transition-colors duration-300">
-                    {faq.question}
-                  </span>
-                  <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center transition-all duration-500 ${openFaqIndex === index ? 'rotate-180 scale-110' : 'group-hover:scale-110'}`}>
-                    <ChevronDown className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
-                  </div>
+              <div key={index} className="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg transition-all">
+                <button className="w-full px-5 py-4 sm:px-6 sm:py-5 text-left flex items-center justify-between hover:bg-blue-50/50 transition-colors" onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}>
+                  <span className="font-bold text-slate-900 text-sm sm:text-base pr-4">{faq.question}</span>
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center transition-all duration-500 ${openFaqIndex === index ? 'rotate-180' : ''}`}><ChevronDown className="h-4 w-4 text-white" /></div>
                 </button>
-                
-                <div className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                  openFaqIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                }`}>
-                  <div className="px-4 pb-4 sm:px-8 sm:pb-6 border-t border-blue-100/50">
-                    <div className="pt-4 sm:pt-6">
-                      <p className="text-slate-700 leading-relaxed text-sm sm:text-lg">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
+                <div className={`overflow-hidden transition-all duration-500 ${openFaqIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                  <div className="px-5 pb-4 sm:px-6 sm:pb-5 border-t border-slate-200"><p className="pt-4 text-slate-700 leading-relaxed text-sm sm:text-base">{faq.answer}</p></div>
                 </div>
               </div>
             ))}
@@ -764,85 +401,34 @@ export default function KreditforeningslaanPage() {
         </div>
       </section>
 
-      {/* Final CTA - Mobile Optimized */}
-      <section className="relative py-16 sm:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700"></div>
-        
-        <div className="relative px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white mb-6 sm:mb-8">
-              Klar til at købe
-              <br />
-              <span className="bg-gradient-to-r from-blue-200 to-indigo-200 bg-clip-text text-transparent">
-                din drømmebolig?
-              </span>
-            </h2>
-            
-            <p className="text-lg sm:text-2xl text-blue-100 mb-12 sm:mb-16 font-light max-w-3xl mx-auto leading-relaxed px-4">
-              Sammenlign kreditforeningslån fra Danmarks førende realkreditinstitutter og find den bedste finansiering til dit boligkøb
-            </p>
-            
-            <div className="flex flex-col items-center justify-center gap-6 sm:gap-8">
-              <a
-                href="#calculator"
-                className="w-full sm:w-auto relative inline-flex items-center justify-center gap-2 sm:gap-4 rounded-3xl bg-white px-8 py-4 sm:px-12 sm:py-6 text-lg sm:text-2xl font-black text-blue-600 shadow-2xl hover:scale-110 transition-all duration-300"
-              >
-                <Calculator className="h-6 w-6 sm:h-7 sm:w-7" />
-                <span>Beregn dit boliglån</span>
-                <ArrowRight className="h-6 w-6 sm:h-7 sm:w-7" />
-              </a>
-              
-              <a
-                href="/guide"
-                className="inline-flex items-center gap-2 sm:gap-4 text-lg sm:text-2xl font-bold text-white hover:text-blue-200 transition-colors duration-300"
-              >
-                <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-2xl bg-white/10 backdrop-blur-sm shadow-2xl flex items-center justify-center hover:bg-white/20 border border-white/20">
-                  <BookOpen className="h-6 w-6 sm:h-7 sm:w-7" />
-                </div>
-                <span>Læs boligguide</span>
-              </a>
-            </div>
-          </div>
+      {/* EDITORIAL NOTE */}
+      <section className="py-8 bg-slate-100 border-t border-slate-200">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <p className="text-sm text-slate-500 leading-relaxed"><strong className="text-slate-700">Redaktionel note:</strong> Indholdet på denne side er vejledende og udgør ikke finansiel rådgivning. Realkreditmarkedet er komplekst, og vi anbefaler altid, at du søger uvildig økonomisk vejledning, før du træffer beslutninger om boligfinansiering. Vi modtager kommission fra partnere, men vores indhold er skrevet med fokus på objektivitet.</p>
         </div>
       </section>
 
-      {/* Custom CSS for sliders */}
-      <style jsx>{`
-        .slider::-webkit-slider-thumb {
-          appearance: none;
-          height: 24px;
-          width: 24px;
-          border-radius: 50%;
-          background: #ffffff;
-          cursor: pointer;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-          border: 2px solid #3b82f6;
-        }
-        
-        @media (max-width: 640px) {
-          .slider::-webkit-slider-thumb {
-            height: 20px;
-            width: 20px;
-          }
-        }
-        
-        .slider::-moz-range-thumb {
-          height: 24px;
-          width: 24px;
-          border-radius: 50%;
-          background: #ffffff;
-          cursor: pointer;
-          border: 2px solid #3b82f6;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-        }
-        
-        @media (max-width: 640px) {
-          .slider::-moz-range-thumb {
-            height: 20px;
-            width: 20px;
-          }
-        }
-      `}</style>
+      {/* FOOTER */}
+      <footer className="bg-slate-900">
+        <div className="mx-auto max-w-7xl px-4 pb-6 pt-12 sm:px-6 sm:pb-8 sm:pt-16 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="h-8 w-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center"><Coins className="h-4 w-4 text-white" /></div>
+              <span className="text-lg font-black bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Lån.dk</span>
+            </div>
+            <nav className="flex gap-6 text-sm text-slate-400">
+              <Link href="/" className="hover:text-white transition-colors">Forside</Link>
+              <Link href="/forbrugslaan" className="hover:text-white transition-colors">Forbrugslån</Link>
+              <Link href="/kviklaan" className="hover:text-white transition-colors">Kviklån</Link>
+              <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
+              <Link href="/om-os" className="hover:text-white transition-colors">Om os</Link>
+            </nav>
+          </div>
+          <div className="mt-8 border-t border-slate-800 pt-6">
+            <p className="text-xs text-slate-500 text-center">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. Alle rettigheder forbeholdes.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
