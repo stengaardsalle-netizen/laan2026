@@ -45,7 +45,7 @@ export default function NotFound() {
           <div className="mt-2 flex flex-wrap justify-center gap-4">
             <Link href="/boliglaan" className="text-blue-600 hover:text-blue-700">Boliglån</Link>
             <Link href="/forbrugslaan" className="text-blue-600 hover:text-blue-700">Forbrugslån</Link>
-            <Link href="/smaa-laan" className="text-blue-600 hover:text-blue-700">Små lån</Link>
+            <Link href="/forbrugslaan" className="text-blue-600 hover:text-blue-700">Forbrugslån</Link>
             <Link href="/guide" className="text-blue-600 hover:text-blue-700">Lånevejledning</Link>
           </div>
         </div>

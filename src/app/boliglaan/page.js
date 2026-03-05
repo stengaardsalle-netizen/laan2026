@@ -419,7 +419,7 @@ export default function BoliglaanPage() {
             <nav className="flex gap-6 text-sm text-slate-400">
               <Link href="/" className="hover:text-white transition-colors">Forside</Link>
               <Link href="/forbrugslaan" className="hover:text-white transition-colors">Forbrugslån</Link>
-              <Link href="/smaa-laan" className="hover:text-white transition-colors">Små lån</Link>
+              <Link href="/opkonvertering" className="hover:text-white transition-colors">Opkonvertering</Link>
               <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
               <Link href="/om-os" className="hover:text-white transition-colors">Om os</Link>
             </nav>

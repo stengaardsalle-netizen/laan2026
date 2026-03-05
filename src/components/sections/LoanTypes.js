@@ -37,9 +37,9 @@ const loanTypes = [
     badge: '🔥 Mest populære'
   },
   {
-    name: 'Små lån',
+    name: 'Opkonvertering',
     description: 'Små, kortfristede lån med hurtig godkendelse og udbetaling samme dag.',
-    href: '/smaa-laan',
+    href: '/opkonvertering',
     icon: BoltIcon,
     gradient: 'from-orange-400 to-red-600',
     bgGradient: 'from-orange-50 to-red-50',

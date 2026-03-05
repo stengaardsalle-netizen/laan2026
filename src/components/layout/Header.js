@@ -27,8 +27,7 @@ export default function Header() {
       href: '/', 
       icon: Home,
       subItems: [
-        { name: 'Lån penge hurtigt', href: '/laan-penge-hurtigt' },
-        { name: 'Små lån', href: '/smaa-laan' }
+        { name: 'Lån penge hurtigt', href: '/laan-penge-hurtigt' }
       ]
     },
     { 
