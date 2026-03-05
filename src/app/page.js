@@ -248,7 +248,7 @@ export default function HomePage() {
               <div><h3 className="text-base font-bold text-white mb-4">Juridisk</h3><ul className="space-y-3">{[{n:'Privatlivspolitik',h:'/privatlivspolitik'},{n:'Vilkår og betingelser',h:'/vilkaar'},{n:'Cookie-politik',h:'/cookies'},{n:'Redaktionel politik',h:'/om-os/redaktionel-politik'}].map((l,i)=>(<li key={i}><Link href={l.h} className="text-slate-400 hover:text-white transition-colors text-sm">{l.n}</Link></li>))}</ul></div>
             </div>
           </div>
-          <div className="mt-12 border-t border-slate-800 pt-6"><div className="flex flex-col md:flex-row items-center justify-between gap-4"><p className="text-xs text-slate-500 text-center md:text-left">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. Alle rettigheder forbeholdes.</p><div className="flex items-center gap-2 text-xs text-slate-500"><div className="h-1.5 w-1.5 bg-green-500 rounded-full animate-pulse"></div>SSL sikret</div></div></div>
+          <div className="mt-12 border-t border-slate-800 pt-6"><div className="flex flex-col md:flex-row items-center justify-between gap-4"><p className="text-xs text-slate-500 text-center md:text-left">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. Alle rettigheder forbeholdes. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a></p><div className="flex items-center gap-2 text-xs text-slate-500"><div className="h-1.5 w-1.5 bg-green-500 rounded-full animate-pulse"></div>SSL sikret</div></div></div>
         </div>
       </footer>
 

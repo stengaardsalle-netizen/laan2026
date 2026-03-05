@@ -1023,7 +1023,7 @@ export default function BilloanPage() {
           
           <div className="mt-16 border-t border-slate-800 pt-8">
             <p className="text-sm text-slate-500 text-center">
-              &copy; 2025 Sammenlign Lån & Find Det Bedste Tilbud – Lån.dk. Alle rettigheder forbeholdes.
+              &copy; 2025 Sammenlign Lån & Find Det Bedste Tilbud – Lån.dk. Alle rettigheder forbeholdes. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a>
             </p>
           </div>
         </div>

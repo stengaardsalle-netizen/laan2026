@@ -425,7 +425,7 @@ export default function BoliglaanPage() {
             </nav>
           </div>
           <div className="mt-8 border-t border-slate-800 pt-6">
-            <p className="text-xs text-slate-500 text-center">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. Alle rettigheder forbeholdes.</p>
+            <p className="text-xs text-slate-500 text-center">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a></p>
           </div>
         </div>
       </footer>

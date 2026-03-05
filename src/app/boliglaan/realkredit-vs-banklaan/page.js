@@ -161,7 +161,7 @@ export default function RealkreditVsBankloanPage() {
       </section>
 
       <section className="py-8 bg-slate-100 border-t border-slate-200"><div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"><p className="text-sm text-slate-500"><strong className="text-slate-700">Redaktionel note:</strong> Renteniveauer er vejledende og afhænger af markedsforhold. <Link href="/om-os/redaktionel-politik" className="text-blue-600 underline">Læs vores redaktionelle politik</Link>.</p></div></section>
-      <footer className="bg-slate-900 py-8"><div className="mx-auto max-w-7xl px-4 text-center"><p className="text-xs text-slate-500">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark.</p></div></footer>
+      <footer className="bg-slate-900 py-8"><div className="mx-auto max-w-7xl px-4 flex flex-col items-center gap-2"><p className="text-xs text-slate-500">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark.</p><a href="/sitemap" className="text-xs text-slate-600 hover:text-slate-400 transition-colors">Sitemap</a></div></footer>
     </div>
   )
 }

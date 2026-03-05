@@ -60,7 +60,7 @@ export default function VidenPage() {
 
       <footer className="bg-slate-900 py-8">
         <div className="mx-auto max-w-7xl px-4 text-center">
-          <p className="text-xs text-slate-500">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark.</p>
+          <p className="text-xs text-slate-500">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a></p>
         </div>
       </footer>
     </div>
