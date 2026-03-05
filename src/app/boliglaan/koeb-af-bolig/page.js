@@ -52,7 +52,7 @@ export default function KoebAfBoligPage() {
               <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg flex-shrink-0"><Home className="h-6 w-6 text-white" /></div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Finansieringen i overblik</h2>
             </div>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">Når du køber en bolig i Danmark, finansieres den typisk med en kombination af tre elementer: din egen udbetaling, et realkreditlån og eventuelt et banklån. Fordelingen følger en fast model, der er reguleret af Finanstilsynet.</p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">Når du køber en bolig i Danmark, finansieres den typisk med en kombination af tre elementer: din egen udbetaling, et realkreditlån og eventuelt et <Link href="/boliglaan/realkredit-vs-banklaan" className="text-blue-600 underline hover:text-blue-800">banklån</Link>. Fordelingen følger en fast model, der er reguleret af <Link href="/viden/lovgivning" className="text-blue-600 underline hover:text-blue-800">Finanstilsynet</Link>.</p>
             
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-6 sm:p-8 border border-blue-200 mb-8">
               <h3 className="text-xl font-black text-blue-900 mb-6">De tre lag i boligfinansieringen</h3>

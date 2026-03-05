@@ -291,7 +291,7 @@ export default function OpkonverteringPage() {
             </div>
 
             <div className="bg-indigo-50 rounded-2xl p-5 border border-indigo-200">
-              <p className="text-indigo-900 font-medium"><strong>Bundlinje:</strong> Opkonvertering er ikke for alle og ikke på alle tidspunkter. Det kræver, at kursfalddet er stort nok til at dække omkostningerne og give en reel besparelse. Men for de rette boligejere på det rette tidspunkt kan det være den mest effektive gældsreduktion, der findes i Danmark.</p>
+              <p className="text-indigo-900 font-medium"><strong>Bundlinje:</strong> Opkonvertering er ikke for alle og ikke på alle tidspunkter. Det kræver, at kursfalddet er stort nok til at dække omkostningerne og give en reel besparelse. Men for de rette boligejere på det rette tidspunkt kan det være den mest effektive gældsreduktion, der findes i Danmark. Den øgede friværdi kan desuden bruges til et <Link href="/boliglaan/tillaegslaan" className="text-indigo-700 underline">tillægslån</Link>, og kursgevinsten er <Link href="/viden/lovgivning" className="text-indigo-700 underline">skattefri ifølge dansk lovgivning</Link>.</p>
             </div>
           </section>
 

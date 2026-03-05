@@ -106,7 +106,7 @@ export default function BoliglaanPage() {
               Et boliglån er ikke bare et lån — det er en strategisk beslutning, der påvirker din økonomi i årtier. I Danmark har vi et af verdens mest sofistikerede boligfinansieringssystemer, bygget op omkring realkreditmodellen. Denne model giver danske boligejere adgang til lån med lave renter, lang løbetid og unikke muligheder for aktiv gældspleje.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Når vi taler om boliglån i Danmark, dækker det typisk over to dele: et realkreditlån (op til 80% af boligens værdi) og eventuelt et supplerende banklån for de resterende procent. Det er realkreditlånet, der udgør fundamentet, og det er her, de store besparelser — og muligheder — ligger.
+              Når vi taler om boliglån i Danmark, dækker det typisk over to dele: et realkreditlån (op til 80% af boligens værdi) og eventuelt et <Link href="/boliglaan/realkredit-vs-banklaan" className="text-blue-600 underline hover:text-blue-800">supplerende banklån</Link> for de resterende procent. Det er realkreditlånet, der udgør fundamentet, og det er her, de store besparelser — og muligheder — ligger. Planlægger du at <Link href="/boliglaan/koeb-af-bolig" className="text-blue-600 underline hover:text-blue-800">købe bolig</Link>? Læs vores komplette guide til finansiering af boligkøb.
             </p>
 
             <div className="bg-blue-50 rounded-2xl p-6 border border-blue-200 mb-6">
@@ -178,7 +178,7 @@ export default function BoliglaanPage() {
                 </div>
                 <div className="bg-white rounded-xl p-5 border border-purple-100">
                   <div className="flex items-center gap-3 mb-2"><div className="h-8 w-8 rounded-lg bg-red-100 flex items-center justify-center"><TrendingDown className="h-5 w-5 text-red-600" /></div><h4 className="font-bold text-slate-900">Kurs 85</h4></div>
-                  <p className="text-slate-600">Du får kun 85 øre per krone. Kurstabet er 15%. Men her opstår en mulighed: Er det dine egne obligationer, kan du købe dem billigt tilbage (opkonvertering).</p>
+                  <p className="text-slate-600">Du får kun 85 øre per krone. Kurstabet er 15%. Men her opstår en mulighed: Er det dine egne obligationer, kan du <Link href="/opkonvertering" className="text-blue-600 underline hover:text-blue-800">købe dem billigt tilbage (opkonvertering)</Link>.</p>
                 </div>
               </div>
             </div>
@@ -289,7 +289,7 @@ export default function BoliglaanPage() {
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Skattefri kursgevinster — unikt for Danmark</h2>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Et af de mest attraktive træk ved det danske realkreditsystem er, at kursgevinster ved indfrielse af realkreditlån er skattefrie for private boligejere. Det betyder, at den gevinst, du opnår ved at købe dine obligationer billigere tilbage (opkonvertering), ikke beskattes.
+              Et af de mest attraktive træk ved det danske realkreditsystem er, at kursgevinster ved indfrielse af realkreditlån er skattefrie for private boligejere. Det betyder, at den gevinst, du opnår ved at købe dine obligationer billigere tilbage (<Link href="/opkonvertering" className="text-blue-600 underline hover:text-blue-800">opkonvertering</Link>), ikke beskattes.
             </p>
 
             <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-3xl p-6 sm:p-8 border border-yellow-200 mb-6">
@@ -326,7 +326,7 @@ export default function BoliglaanPage() {
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Realkreditlån vs. Banklån</h2>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Mange boligkøbere bruger begge dele, men det er vigtigt at forstå forskellen, da den har stor betydning for de samlede omkostninger.
+              Mange boligkøbere bruger begge dele, men det er vigtigt at forstå forskellen, da den har stor betydning for de samlede omkostninger. <Link href="/boliglaan/realkredit-vs-banklaan" className="text-blue-600 underline hover:text-blue-800">Læs vores dybdegående sammenligning af realkreditlån og banklån</Link>.
             </p>
             <div className="overflow-x-auto mb-6">
               <table className="w-full border-collapse bg-white rounded-2xl overflow-hidden shadow-lg">

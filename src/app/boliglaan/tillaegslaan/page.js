@@ -79,7 +79,7 @@ export default function TillaegsloanPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               {[
                 { title: 'Renovering og energiforbedringer', desc: 'Øger boligens værdi og kan reducere energiudgifter. Ofte den mest fornuftige brug af friværdi.', icon: '🏠' },
-                { title: 'Indfrielse af dyr gæld', desc: 'Erstat banklån (4-8% rente) eller forbrugslån (8-25%) med et billigt realkreditlån (2-5%).', icon: '💰' },
+                { title: 'Indfrielse af dyr gæld', desc: 'Erstat banklån (4-8% rente) eller forbrugslån (8-25%) med et billigt realkreditlån (2-5%). Læs mere om renter og ÅOP.', icon: '💰', href: '/forbrugslaan/renter-og-aop' },
                 { title: 'Større investering', desc: 'Udnyt den lave realkreditrente til at finansiere f.eks. en lejlighed til udlejning eller andre aktiver.', icon: '📈' },
                 { title: 'Ekstra likviditet', desc: 'Skab økonomisk buffer i perioder med stram økonomi eller uforudsete udgifter.', icon: '🛡️' },
               ].map((use, i) => (

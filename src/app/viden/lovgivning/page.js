@@ -33,7 +33,7 @@ export default function LovgivningPage() {
               <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg flex-shrink-0"><Scale className="h-6 w-6 text-white" /></div>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Kreditaftaleloven</h2>
             </div>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">Kreditaftaleloven er den centrale lov, der regulerer forbrugslån og kreditaftaler i Danmark. Loven gennemfører EU&apos;s forbrugerkreditdirektiv og stiller strenge krav til långiverne:</p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">Kreditaftaleloven er den centrale lov, der regulerer forbrugslån og kreditaftaler i Danmark. Loven gennemfører EU&apos;s forbrugerkreditdirektiv og stiller strenge krav til långiverne. Se vores <Link href="/viden/laaneordbog" className="text-blue-600 underline hover:text-blue-800">låneordbog</Link> for forklaring af alle begreber:</p>
             <div className="space-y-3 mb-6">
               {['Långiver skal oplyse ÅOP, samlet kreditbeløb og samlede omkostninger klart og tydeligt','Kreditvurdering er et lovkrav — långiver må ikke udstede lån uden vurdering af din betalingsevne','Du har ret til et standardiseret informationsblad (ESIS) ved boliglån, der gør sammenligning mulig','Alle gebyrer og vilkår skal fremgå tydeligt af aftalen, inden du underskriver'].map((item,i)=>(
                 <div key={i} className="flex items-start gap-3"><CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0"/><span className="text-slate-700">{item}</span></div>

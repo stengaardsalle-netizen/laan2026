@@ -46,7 +46,7 @@ export default function RealkreditVsBankloanPage() {
 
           <section className="mb-14">
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6">Den fundamentale forskel</h2>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">Den afgørende forskel er, hvordan pengene skaffes. Et realkreditlån finansieres via obligationsmarkedet — investorer køber obligationer, og pengene går til dig som boligkøber. Prisen bestemmes af markedet, hvilket historisk har givet de laveste renter. Et banklån finansieres af bankens egne midler, og prisen sættes af banken selv — typisk markant højere.</p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">Den afgørende forskel er, hvordan pengene skaffes. Et realkreditlån finansieres via obligationsmarkedet — investorer køber obligationer, og pengene går til dig som boligkøber. Prisen bestemmes af markedet, hvilket historisk har givet de laveste renter. Et banklån finansieres af bankens egne midler, og prisen sættes af banken selv — typisk markant højere. Er du <Link href="/boliglaan/koeb-af-bolig" className="text-blue-600 underline hover:text-blue-800">førstegangskøber</Link>? Læs vores guide til køb af bolig.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200">
