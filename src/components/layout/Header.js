@@ -31,7 +31,15 @@ export default function Header() {
         { name: 'Små lån', href: '/smaa-laan' }
       ]
     },
-    { name: 'Boliglån', href: '/boliglaan', icon: Building },
+    { 
+      name: 'Boliglån', 
+      href: '/boliglaan', 
+      icon: Building,
+      subItems: [
+        { name: 'Boliglån guide', href: '/boliglaan' },
+        { name: 'Opkonvertering', href: '/opkonvertering' }
+      ]
+    },
     { 
       name: 'Forbrugslån', 
       href: '/forbrugslaan', 
