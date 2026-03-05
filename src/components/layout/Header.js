@@ -23,10 +23,12 @@ export default function Header() {
   // Navigation items
   const navigation = [
     { 
-      name: 'Forside', 
-      href: '/', 
+      name: 'Lån penge', 
+      href: '/forbrugslaan', 
       icon: Home,
       subItems: [
+        { name: 'Forbrugslån', href: '/forbrugslaan' },
+        { name: 'Renter og ÅOP', href: '/forbrugslaan/renter-og-aop' },
         { name: 'Lån penge hurtigt', href: '/laan-penge-hurtigt' }
       ]
     },
@@ -35,26 +37,35 @@ export default function Header() {
       href: '/boliglaan', 
       icon: Building,
       subItems: [
-        { name: 'Boliglån guide', href: '/boliglaan' },
-        { name: 'Opkonvertering', href: '/opkonvertering' }
+        { name: 'Guide til boliglån', href: '/boliglaan' },
+        { name: 'Køb af bolig', href: '/boliglaan/koeb-af-bolig' },
+        { name: 'Realkreditlån vs. banklån', href: '/boliglaan/realkredit-vs-banklaan' },
+        { name: 'Omlægning af lån', href: '/opkonvertering' },
+        { name: 'Tillægslån i friværdien', href: '/boliglaan/tillaegslaan' }
       ]
     },
     { 
-      name: 'Forbrugslån', 
-      href: '/forbrugslaan', 
+      name: 'Billån', 
+      href: '/billaan', 
       icon: ShoppingBag,
-      subItems: [
-        { name: 'Standard forbrugslån', href: '/forbrugslaan' },
-        { name: 'Renter og ÅOP', href: '/forbrugslaan/renter-og-aop' }
-      ]
     },
-    { name: 'Kontakt', href: '/kontakt', icon: Phone },
     { 
-      name: 'Om os', 
-      href: '/om-os', 
+      name: 'Viden', 
+      href: '/viden', 
       icon: Info,
       subItems: [
-        { name: 'Jesper Jensen fra Lån.dk', href: '/om-os/jesper-jensen' }
+        { name: 'Låneordbog', href: '/viden/laaneordbog' },
+        { name: 'Lovgivning og rettigheder', href: '/viden/lovgivning' }
+      ]
+    },
+    { 
+      name: 'Om Lån.dk', 
+      href: '/om-os', 
+      icon: Phone,
+      subItems: [
+        { name: 'Hvem er vi', href: '/om-os' },
+        { name: 'Redaktionel politik', href: '/om-os/redaktionel-politik' },
+        { name: 'Kontakt', href: '/kontakt' }
       ]
     },
   ]
