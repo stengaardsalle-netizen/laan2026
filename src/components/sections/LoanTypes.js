@@ -37,9 +37,9 @@ const loanTypes = [
     badge: '🔥 Mest populære'
   },
   {
-    name: 'Kviklån',
+    name: 'Små lån',
     description: 'Små, kortfristede lån med hurtig godkendelse og udbetaling samme dag.',
-    href: '/kviklaan',
+    href: '/smaa-laan',
     icon: BoltIcon,
     gradient: 'from-orange-400 to-red-600',
     bgGradient: 'from-orange-50 to-red-50',

@@ -400,7 +400,7 @@ export default function KontaktPage() {
                       <option value="">Vælg emne</option>
                       <option value="boliglaan">Boliglån</option>
                       <option value="forbrugslaan">Forbrugslån</option>
-                      <option value="kviklaan">Kviklån</option>
+                      <option value="smaalaan">Små lån</option>
                       <option value="samlelaan">Samlelån</option>
                       <option value="generelt">Generelle spørgsmål</option>
                       <option value="support">Teknisk support</option>

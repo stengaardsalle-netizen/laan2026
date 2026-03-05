@@ -49,15 +49,6 @@ export default function Header() {
         { name: 'Renter og ÅOP', href: '/forbrugslaan/renter-og-aop' }
       ]
     },
-    { 
-      name: 'Kviklån', 
-      href: '/kviklaan', 
-      icon: Zap,
-      subItems: [
-        { name: 'Straks udbetaling', href: '/kviklaan/straks-udbetaling' },
-        { name: 'Uden kreditvurdering', href: '/kviklaan/straks-udbetaling/uden-kreditvurdering' }
-      ]
-    },
     { name: 'Kontakt', href: '/kontakt', icon: Phone },
     { 
       name: 'Om os', 

@@ -4,7 +4,7 @@ const footerNavigation = {
   låntyper: [
     { name: 'Boliglån', href: '/boliglaan' },
     { name: 'Forbrugslån', href: '/forbrugslaan' },
-    { name: 'Kviklån', href: '/kviklaan' },
+    { name: 'Billån', href: '/billaan' },
     { name: 'Samlelån', href: '/samlelaan' },
     { name: 'Erhvervslån', href: '/erhvervslaan' },
   ],

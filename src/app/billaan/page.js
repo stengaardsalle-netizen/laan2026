@@ -997,8 +997,8 @@ export default function BilloanPage() {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/kviklaan" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Kviklån
+                    <Link href="/smaa-laan" className="text-slate-400 hover:text-white transition-colors duration-300">
+                      Små lån
                     </Link>
                   </li>
                 </ul>
