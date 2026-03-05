@@ -1,9 +1,9 @@
 export const metadata = {
-  title: 'Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån | Lån.dk 2025',
+  title: 'Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån',
   description: 'Lån penge hurtigt! Sammenlign kviklån, SMS lån og forbrugslån. Få penge på kontoen samme dag. 100% gratis sammenligning.',
   keywords: 'lån penge hurtigt, kviklån, SMS lån, hurtige lån, forbrugslån, lån samme dag, online lån',
   openGraph: {
-    title: 'Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån | Lån.dk',
+    title: 'Lån Penge Hurtigt - Sammenlign Kviklån & SMS Lån',
     description: 'Lån penge hurtigt! Sammenlign kviklån, SMS lån og forbrugslån. Få penge på kontoen samme dag.',
     type: 'website',
     url: 'https://loan-dk.vercel.app/laan-penge-hurtigt',
