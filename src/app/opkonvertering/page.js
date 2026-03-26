@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../components/layout/Header'
 import { TrendingUp, CheckCircle, ChevronDown, ArrowRight, BookOpen, Coins, Shield, AlertTriangle, Calculator, ArrowDownUp, Building2, TrendingDown, RefreshCw, Percent } from 'lucide-react'
+import ArticleByline from '../../components/ArticleByline'
 
 export default function OpkonverteringPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)

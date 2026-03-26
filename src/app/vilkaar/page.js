@@ -21,7 +21,7 @@ export default function VilkaarPage() {
           <div className="space-y-8">
             <section>
               <h2 className="text-2xl font-black text-slate-900 mb-4">1. Om Lån.dk</h2>
-              <p className="text-slate-700 leading-relaxed">Lån.dk drives af FitezFinance, Stengårds Alle 45, DK-2800 Kgs. Lyngby. Siden er en vejledningsportal, der giver information om lån og lånemuligheder i Danmark. Vi er ikke en bank, et realkreditinstitut eller en finansiel rådgiver.</p>
+              <p className="text-slate-700 leading-relaxed">Lån.dk drives af Lån.dk ApS (CVR: 37923680), Stengårds Alle 45, DK-2800 Kgs. Lyngby. Siden er en vejledningsportal, der giver information om lån og lånemuligheder i Danmark. Vi er ikke en bank, et realkreditinstitut eller en finansiel rådgiver.</p>
             </section>
             <section>
               <h2 className="text-2xl font-black text-slate-900 mb-4">2. Tjenestens karakter</h2>

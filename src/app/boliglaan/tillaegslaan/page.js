@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../../components/layout/Header'
 import { TrendingUp, BookOpen, CheckCircle, ChevronDown, AlertTriangle, Calculator, ArrowRight, Coins, Home, Shield } from 'lucide-react'
+import ArticleByline from '../../../components/ArticleByline'
 
 export default function TillaegsloanPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)

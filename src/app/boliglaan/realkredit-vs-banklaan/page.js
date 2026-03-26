@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../../components/layout/Header'
 import { ArrowDownUp, BookOpen, CheckCircle, ChevronDown, Shield, Coins, Building2, Banknote, AlertTriangle, Calculator, ArrowRight } from 'lucide-react'
+import ArticleByline from '../../../components/ArticleByline'
 
 export default function RealkreditVsBankloanPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)

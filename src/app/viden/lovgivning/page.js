@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Header from '../../../components/layout/Header'
 import { Scale, Shield, BookOpen, FileText, CheckCircle, AlertTriangle, Coins } from 'lucide-react'
+import ArticleByline from '../../../components/ArticleByline'
 
 export default function LovgivningPage() {
   return (

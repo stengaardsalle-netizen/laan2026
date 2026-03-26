@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../components/layout/Header'
 import { Building2, CheckCircle, Calculator, Coins, Clock, TrendingUp, Shield, ArrowRight, BookOpen, ChevronDown, TrendingDown, Banknote, Lock, Unlock, BarChart3, AlertTriangle, Percent, ArrowDownUp, RefreshCw } from 'lucide-react'
+import ArticleByline from '../../components/ArticleByline'
 
 export default function BoliglaanPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
@@ -101,6 +102,13 @@ export default function BoliglaanPage() {
       </nav>
 
       {/* ARTICLE */}
+      <ArticleByline 
+        title="Boliglån: Alt du skal vide om finansiering af bolig" 
+        description="Forstå realkreditlån, obligationer, kurser, konvertering og skattefri kursgevinster."
+        datePublished="2025-06-01"
+        dateModified="2026-03-26"
+        breadcrumbs={[{ name: 'Boliglån', href: '/boliglaan' }]}
+      />
       <article className="py-12 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
 

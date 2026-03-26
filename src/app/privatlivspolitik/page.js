@@ -21,9 +21,9 @@ export default function PrivatlivspolitikPage() {
           <div className="space-y-8">
             <section>
               <h2 className="text-2xl font-black text-slate-900 mb-4">1. Dataansvarlig</h2>
-              <p className="text-slate-700 leading-relaxed">Lån.dk (FitezFinance) er dataansvarlig for behandlingen af de personoplysninger, vi modtager om dig. Du kan kontakte os på:</p>
+              <p className="text-slate-700 leading-relaxed">Lån.dk ApS (CVR: 37923680) er dataansvarlig for behandlingen af de personoplysninger, vi modtager om dig. Du kan kontakte os på:</p>
               <div className="bg-slate-50 rounded-xl p-4 border border-slate-200 text-sm text-slate-700">
-                <p><strong>FitezFinance</strong></p>
+                <p><strong>Lån.dk ApS</strong></p><p>CVR: 37923680</p>
                 <p>Stengårds Alle 45, DK-2800 Kgs. Lyngby</p>
                 <p>Email: info@fitezfinance.com</p>
               </div>

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '../components/layout/Header'
 import { Calculator, Coins, Clock, TrendingUp, Sparkles, ArrowRight, BookOpen, CheckCircle, Shield, Users, Award, ChevronDown, AlertTriangle, Percent, FileText, Scale } from 'lucide-react'
+import ArticleByline from '../components/ArticleByline'
 
 export default function HomePage() {
   const [amount, setAmount] = useState(100000)
@@ -88,6 +89,13 @@ export default function HomePage() {
       </nav>
 
       {/* ARTICLE */}
+      <ArticleByline 
+        title="Den ultimative guide til lån i Danmark" 
+        description="Alt du skal vide før du låner. Forstå ÅOP, renter, kreditvurdering og ansvarlig låntagning."
+        datePublished="2025-06-01"
+        dateModified="2026-03-26"
+        breadcrumbs={[]}
+      />
       <article className="py-12 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="mb-14">

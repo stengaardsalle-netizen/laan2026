@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../../components/layout/Header'
 import { Home, BookOpen, CheckCircle, ChevronDown, AlertTriangle, Calculator, ArrowRight, Shield, Coins, FileText, Users } from 'lucide-react'
+import ArticleByline from '../../../components/ArticleByline'
 
 export default function KoebAfBoligPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)

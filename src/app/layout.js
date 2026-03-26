@@ -13,7 +13,7 @@ export const metadata = {
   keywords: 'lån, boliglån, forbrugslån, realkreditlån, billån, sammenlign lån, renter, ÅOP, Danmark, opkonvertering, kreditvurdering',
   authors: [{ name: 'Jesper Jensen', url: 'https://www.xn--ln-yia.dk/om-os' }],
   creator: 'Lån.dk',
-  publisher: 'FitezFinance',
+  publisher: 'Lån.dk ApS',
   openGraph: {
     type: 'website',
     locale: 'da_DK',
@@ -32,9 +32,52 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lån.dk ApS",
+    "alternateName": "Lån.dk",
+    "url": "https://www.xn--ln-yia.dk",
+    "description": "Uafhængig vejledning om lån i Danmark. Sammenlign boliglån, forbrugslån og billån.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Stengårds Alle 45",
+      "addressLocality": "Kgs. Lyngby",
+      "postalCode": "2800",
+      "addressCountry": "DK"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+45-31-38-02-17",
+      "contactType": "customer service",
+      "availableLanguage": "Danish"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Jesper Jensen",
+      "jobTitle": "Grundlægger og CEO"
+    },
+    "taxID": "37923680",
+    "sameAs": []
+  }
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lån.dk",
+    "url": "https://www.xn--ln-yia.dk",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Lån.dk ApS"
+    },
+    "inLanguage": "da"
+  }
+
   return (
     <html lang="da">
       <body className={inter.className}>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
         {children}
       </body>
     </html>
