@@ -18,7 +18,7 @@ export default function HomePage() {
     { question: 'Hvor meget kan jeg låne penge online?', answer: 'De fleste online udbydere tilbyder lån fra 5.000 kr. op til 500.000 kr. uden sikkerhed. Beløbet afhænger dog 100% af din individuelle kreditvurdering og dit rådighedsbeløb.' },
     { question: 'Hvordan finder jeg det billigste lån?', answer: 'Du finder det billigste lån ved at sammenligne ÅOP på tværs af flere tilbud med præcis samme lånebeløb og løbetid. Hold øje med de samlede tilbagebetalingsbeløb for at se de reelle omkostninger.' },
     { question: 'Hvad sker der, hvis jeg ikke kan betale mit lån tilbage?', answer: 'Hvis du misligholder dit lån, vil du først modtage rykkergebyrer. Fortsætter problemet, kan du blive registreret i gældsregistre, hvilket vil gøre det næsten umuligt at låne penge, tegne abonnementer eller købe på afbetaling i fremtiden. Kontakt altid din bank hurtigst muligt, hvis du får problemer.' },
-    { question: 'Er det sikkert at låne penge online?', answer: 'Ja, så længe du vælger en udbyder, der er under tilsyn af Finanstilsynet. I Danmark er der meget strenge krav til gennemsigtighed og markedsføring af lån, herunder renteloft og ÅOP-loft.' },
+    { question: 'Er det sikkert at låne penge online?', answer: 'Ja, så længe du vælger en udbyder, der er under tilsyn af Finanstilsynet. I Danmark er der meget strenge krav til gennemsigtighed og markedsføring af lån, herunder renteloft og ÅOP-loft. Tjek altid udbyderen på finanstilsynet.dk.' },
     { question: 'Kan jeg indfri mit lån før tid?', answer: 'Ja, ifølge dansk lovgivning har du altid ret til at indfri dit lån før tid. Hos de fleste udbydere er dette gratis, og det er en fremragende måde at spare penge på renteudgifter, hvis du får luft i økonomien.' },
     { question: 'Hvad er forskellen på et privatlån og et samlelån?', answer: 'Et privatlån er et nyt lån til her-og-nu forbrug. Et samlelån bruges til at afbetale flere eksisterende lån og kreditter for at samle dem ét sted, typisk til en lavere samlet rente og færre gebyrer.' },
     { question: 'Hvor hurtigt bliver pengene udbetalt?', answer: 'Udbetalingstiden varierer. Nogle udbydere kan udbetale samme dag eller inden for 24 timer efter godkendelse med MitID, mens andre bruger 1-2 bankdage.' },
@@ -30,6 +30,14 @@ export default function HomePage() {
     if (r === 0) { setMonthlyPayment(amount / n); setTotalCost(amount); setTotalInterest(0) }
     else { const p = (amount * r * Math.pow(1+r,n))/(Math.pow(1+r,n)-1); setMonthlyPayment(p); setTotalCost(p*n); setTotalInterest(p*n - amount) }
   }, [amount, interestRate, termYears])
+
+  const renderAnswer = (text) => {
+    if (text.includes('finanstilsynet.dk')) {
+      const parts = text.split('finanstilsynet.dk')
+      return <>{parts[0]}<a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">finanstilsynet.dk</a>{parts[1]}</>
+    }
+    return text
+  }
 
   const fmt = (v) => new Intl.NumberFormat('da-DK',{style:'currency',currency:'DKK',maximumFractionDigits:0}).format(v)
 
@@ -216,7 +224,7 @@ export default function HomePage() {
                   <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center transition-all duration-500 ${openFaqIndex===index?'rotate-180':''}`}><ChevronDown className="h-4 w-4 text-white"/></div>
                 </button>
                 <div className={`overflow-hidden transition-all duration-500 ${openFaqIndex===index?'max-h-96 opacity-100':'max-h-0 opacity-0'}`}>
-                  <div className="px-5 pb-4 sm:px-6 sm:pb-5 border-t border-slate-200"><p className="pt-4 text-slate-700 leading-relaxed text-sm sm:text-base">{faq.answer}</p></div>
+                  <div className="px-5 pb-4 sm:px-6 sm:pb-5 border-t border-slate-200"><p className="pt-4 text-slate-700 leading-relaxed text-sm sm:text-base">{renderAnswer(faq.answer)}</p></div>
                 </div>
               </div>
             ))}

@@ -12,9 +12,17 @@ export default function BoliglaanPage() {
     { question: 'Hvad er kursgevinst ved indfrielse af realkreditlån?', answer: 'Kursgevinst opstår, når du indfrier dit realkreditlån til en kurs, der er lavere end den kurs, du oprindeligt optog lånet til. Hvis du f.eks. optog et lån, da kursen var 98, og renten siden er steget, kan kursen på dine obligationer være faldet til eksempelvis 85. Du kan nu "købe din gæld tilbage" til kurs 85 i stedet for kurs 100, og dermed reducere din restgæld med 15%. I Danmark er denne gevinst skattefri for private boligejere — et unikt træk ved det danske realkreditsystem.' },
     { question: 'Hvornår kan det betale sig at omlægge sit boliglån?', answer: 'Omlægning kan betale sig i to scenarier. Ved opkonvertering (når renten stiger) kan du reducere din restgæld ved at købe dine obligationer billigere tilbage. Ved nedkonvertering (når renten falder) kan du sikre en lavere månedlig ydelse. Som tommelfingerregel bør renteforskellen være mindst 0,5-1 procentpoint for at dække omlægningsomkostningerne, typisk 5.000-15.000 kr. Kontakt altid din bank eller en uafhængig vejleder for en konkret beregning.' },
     { question: 'Hvad er forskellen på fast og variabel rente?', answer: 'Et fastforrentet lån (typisk F30) giver dig en fast rente i hele lånets løbetid. Du kender din præcise ydelse fra dag ét, men betaler en præmie for sikkerheden. Variabelt forrentede lån (F-kort, F1, F3, F5) tilpasser renten ved hvert rentetilpasningsinterval. Du får typisk en lavere startrente, men påtager dig risikoen for, at renten stiger ved næste tilpasning.' },
-    { question: 'Hvor meget kan jeg låne til bolig?', answer: 'Du kan som udgangspunkt belåne op til 80% af boligens værdi med realkreditlån. De resterende 20% dækkes typisk af udbetaling og eventuelt banklån. Din personlige lånekapacitet afhænger af husstandens indkomst, eksisterende gæld, og din boligsituation. Finanstilsynet anbefaler, at din samlede gæld ikke overstiger 4 gange din årlige bruttoindkomst.' },
+    { question: 'Hvor meget kan jeg låne til bolig?', answer: 'Du kan som udgangspunkt belåne op til 80% af boligens værdi med realkreditlån. De resterende 20% dækkes typisk af udbetaling og eventuelt banklån. Din personlige lånekapacitet afhænger af husstandens indkomst, eksisterende gæld, og din boligsituation. Finanstilsynet (finanstilsynet.dk) anbefaler, at din samlede gæld ikke overstiger 4 gange din årlige bruttoindkomst.' },
     { question: 'Hvad er afdragsfrihed, og hvornår er det en god idé?', answer: 'Afdragsfrihed betyder, at du i en periode (typisk op til 10 år) kun betaler renter og bidrag, men ikke afdrager på selve lånet. Din restgæld forbliver uændret. Det kan give råderum i perioder med stram økonomi, men det forlænger den samlede tilbagebetalingsperiode og øger de totale renteudgifter. Afdragsfrihed bør ses som et midlertidigt værktøj, ikke en permanent løsning.' },
   ]
+
+  const renderAnswer = (text) => {
+    if (text.includes('finanstilsynet.dk')) {
+      const parts = text.split('finanstilsynet.dk')
+      return <>{parts[0]}<a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">finanstilsynet.dk</a>{parts[1]}</>
+    }
+    return text
+  }
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -393,7 +401,7 @@ export default function BoliglaanPage() {
                   <div className={`flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center transition-all duration-500 ${openFaqIndex === index ? 'rotate-180' : ''}`}><ChevronDown className="h-4 w-4 text-white" /></div>
                 </button>
                 <div className={`overflow-hidden transition-all duration-500 ${openFaqIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <div className="px-5 pb-4 sm:px-6 sm:pb-5 border-t border-slate-200"><p className="pt-4 text-slate-700 leading-relaxed text-sm sm:text-base">{faq.answer}</p></div>
+                  <div className="px-5 pb-4 sm:px-6 sm:pb-5 border-t border-slate-200"><p className="pt-4 text-slate-700 leading-relaxed text-sm sm:text-base">{renderAnswer(faq.answer)}</p></div>
                 </div>
               </div>
             ))}

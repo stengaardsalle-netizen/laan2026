@@ -14,7 +14,7 @@ const terms = [
   { term: 'Ejerudgift', def: 'De samlede udgifter ved at eje en bolig: ydelse på lån, ejendomsskat, forsikring, vedligeholdelse og varme.' },
   { term: 'F-kort / F1 / F3 / F5', def: 'Variabelt forrentede realkreditlån med rentetilpasning. Tallet angiver intervallet: F1 tilpasses årligt, F3 hvert 3. år, F5 hvert 5. år. F-kort tilpasses løbende.' },
   { term: 'Fastforrentet lån', def: 'Et realkreditlån med en rente, der er fastsat i hele lånets løbetid (typisk 30 år). Giver fuld sikkerhed mod rentestigninger.' },
-  { term: 'Finanstilsynet', def: 'Den danske myndighed, der fører tilsyn med banker, realkreditinstitutter og andre finansielle virksomheder. Sikrer, at de overholder lovgivningen.' },
+  { term: 'Finanstilsynet', def: 'Den danske myndighed, der fører tilsyn med banker, realkreditinstitutter og andre finansielle virksomheder. Sikrer, at de overholder lovgivningen.', url: 'https://www.finanstilsynet.dk' },
   { term: 'Fortrydelsesret', def: 'Du har 14 dages fortrydelsesret på forbrugslån ifølge kreditaftaleloven. Ved realkreditlån gælder fortrydelsesretten kun på rådgivningen, ikke selve lånet.' },
   { term: 'Friværdi', def: 'Forskellen mellem din boligs markedsværdi og den samlede gæld i boligen. Positiv friværdi betyder, at boligen er mere værd end gælden.' },
   { term: 'Hovedstol', def: 'Det oprindelige lånebeløb, du optager. Adskilt fra den restgæld, der ændres i takt med afdrag og eventuelle kursjusteringer.' },
@@ -32,7 +32,7 @@ const terms = [
   { term: 'Renteloft', def: 'Lovmæssig øvre grænse for renten på forbrugslån i Danmark. Fastsat for at beskytte forbrugere mod urimelige renteniveauer.' },
   { term: 'Restgæld', def: 'Det beløb, du til enhver tid skylder på dit lån. Falder i takt med dine afdrag (medmindre du har afdragsfrihed).' },
   { term: 'Rådighedsbeløb', def: 'Det beløb du har tilbage hver måned, når alle faste udgifter (inkl. lån) er betalt. En vigtig faktor i kreditvurderingen.' },
-  { term: 'Tinglysning', def: 'Officiel registrering af pantebreve i boligen hos Tinglysningsretten. Tinglysningsafgiften er 1.825 kr. + 1,45% af hovedstolen.' },
+  { term: 'Tinglysning', def: 'Officiel registrering af pantebreve i boligen hos Tinglysningsretten. Tinglysningsafgiften er 1.825 kr. + 1,45% af hovedstolen.', url: 'https://www.tinglysning.dk' },
   { term: 'Variabel rente', def: 'Rente der tilpasses løbende eller ved faste intervaller (F1, F3, F5). Giver typisk lavere startrente, men med risiko for stigning.' },
   { term: 'Ydelse', def: 'Dit samlede månedlige beløb til långiveren: renter + afdrag + bidrag/gebyrer.' },
   { term: 'ÅOP', def: 'Årlige Omkostninger i Procent. Et lovpligtigt nøgletal der samler ALLE lånets omkostninger i ét tal: rente, gebyrer, bidrag. Altid højere end den nominelle rente. Brug ÅOP til at sammenligne lån.' },
@@ -74,7 +74,7 @@ export default function LaaneordbogPage() {
             {filtered.map((t, i) => (
               <div key={i} id={t.term.toLowerCase().replace(/[\s\/]/g, '-')} className="bg-white rounded-2xl p-5 sm:p-6 shadow-md border border-slate-200 hover:shadow-lg transition-all">
                 <h2 className="text-lg sm:text-xl font-black text-slate-900 mb-2">{t.term}</h2>
-                <p className="text-slate-600 leading-relaxed">{t.def}</p>
+                <p className="text-slate-600 leading-relaxed">{t.def}{t.url && <> <a href={t.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Læs mere her</a>.</>}</p>
               </div>
             ))}
             {filtered.length === 0 && (

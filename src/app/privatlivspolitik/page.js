@@ -57,7 +57,7 @@ export default function PrivatlivspolitikPage() {
             </section>
             <section>
               <h2 className="text-2xl font-black text-slate-900 mb-4">8. Klageadgang</h2>
-              <p className="text-slate-700 leading-relaxed">Du kan klage til Datatilsynet, hvis du mener, at vi behandler dine personoplysninger i strid med lovgivningen. Datatilsynet kan kontaktes via datatilsynet.dk.</p>
+              <p className="text-slate-700 leading-relaxed">Du kan klage til <a href="https://www.datatilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Datatilsynet</a>, hvis du mener, at vi behandler dine personoplysninger i strid med lovgivningen. Datatilsynet kan kontaktes via <a href="https://www.datatilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">datatilsynet.dk</a>.</p>
             </section>
           </div>
         </div>

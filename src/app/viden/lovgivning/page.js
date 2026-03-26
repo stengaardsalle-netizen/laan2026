@@ -61,11 +61,11 @@ export default function LovgivningPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <div className="bg-white rounded-2xl p-5 shadow-md border border-slate-200">
                 <h3 className="font-bold text-slate-900 mb-2">Renteloft</h3>
-                <p className="text-slate-600 text-sm">Den årlige rente på forbrugslån må ikke overstige 35% over Nationalbankens udlånsrente. Det sætter en øvre grænse for, hvor dyrt et lån kan blive.</p>
+                <p className="text-slate-600 text-sm">Den årlige rente på forbrugslån må ikke overstige 35% over <a href="https://www.nationalbanken.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Nationalbankens</a> udlånsrente. Det sætter en øvre grænse for, hvor dyrt et lån kan blive.</p>
               </div>
               <div className="bg-white rounded-2xl p-5 shadow-md border border-slate-200">
                 <h3 className="font-bold text-slate-900 mb-2">ÅOP-loft</h3>
-                <p className="text-slate-600 text-sm">De samlede årlige omkostninger (ÅOP) må ikke overstige 35% over Nationalbankens udlånsrente + 15 procentpoint. Det inkluderer alle gebyrer og omkostninger.</p>
+                <p className="text-slate-600 text-sm">De samlede årlige omkostninger (ÅOP) må ikke overstige 35% over <a href="https://www.nationalbanken.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Nationalbankens</a> udlånsrente + 15 procentpoint. Det inkluderer alle gebyrer og omkostninger.</p>
               </div>
             </div>
           </section>
@@ -73,11 +73,11 @@ export default function LovgivningPage() {
           <section className="mb-14">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center shadow-lg flex-shrink-0"><FileText className="h-6 w-6 text-white" /></div>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Finanstilsynets rolle</h2>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900"><a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="hover:text-blue-700 transition-colors">Finanstilsynets</a> rolle</h2>
             </div>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">Finanstilsynet er den danske myndighed, der overvåger alle finansielle virksomheder — fra banker og realkreditinstitutter til onlinelåneudbydere. Tilsynet sikrer, at virksomhederne overholder lovgivningen og behandler kunderne fair.</p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">Finanstilsynet er den danske myndighed, der overvåger alle finansielle virksomheder — fra banker og realkreditinstitutter til onlinelåneudbydere. Tilsynet sikrer, at virksomhederne overholder lovgivningen og behandler kunderne fair. <a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Læs mere på finanstilsynet.dk</a>.</p>
             <div className="bg-green-50 rounded-2xl p-5 border border-green-200">
-              <p className="text-green-900 font-medium"><strong>Tip:</strong> Du kan altid tjekke, om en låneudbyder har tilladelse fra Finanstilsynet på <strong>finanstilsynet.dk</strong>. Lån aldrig penge fra udbydere uden tilladelse.</p>
+              <p className="text-green-900 font-medium"><strong>Tip:</strong> Du kan altid tjekke, om en låneudbyder har tilladelse fra Finanstilsynet på <a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-green-700 underline hover:text-green-900">finanstilsynet.dk</a>. Lån aldrig penge fra udbydere uden tilladelse.</p>
             </div>
           </section>
 
@@ -94,7 +94,7 @@ export default function LovgivningPage() {
 
       <section className="py-8 bg-slate-100 border-t border-slate-200">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <p className="text-sm text-slate-500 leading-relaxed"><strong className="text-slate-700">Redaktionel note:</strong> Denne oversigt er vejledende og erstatter ikke juridisk rådgivning. Lovgivning kan ændres. Senest opdateret 2025. For aktuel lovtekst henvises til retsinformation.dk.</p>
+          <p className="text-sm text-slate-500 leading-relaxed"><strong className="text-slate-700">Redaktionel note:</strong> Denne oversigt er vejledende og erstatter ikke juridisk rådgivning. Lovgivning kan ændres. Senest opdateret 2025. For aktuel lovtekst henvises til <a href="https://www.retsinformation.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">retsinformation.dk</a>.</p>
         </div>
       </section>
 
