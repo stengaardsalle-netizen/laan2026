@@ -12,7 +12,7 @@ export default function OpkonverteringPage() {
   const faqs = [
     {
       question: 'Hvad koster en opkonvertering?',
-      answer: 'De typiske omkostninger ved en opkonvertering inkluderer: Kurtage til realkreditinstituttet (typisk 0,1-0,15% af lånets hovedstol), tinglysningsafgift til staten (1.825 kr. fast + 1,45% af det nye låns hovedstol), sagsgebyr til banken (3.000-8.000 kr.), og eventuel kursskæring. De samlede omkostninger ligger typisk mellem 30.000-60.000 kr. afhængigt af lånets størrelse, men skal altid holdes op imod den potentielle gældsreduktion, som kan være hundredtusinder af kroner.'
+      answer: 'De typiske omkostninger ved en opkonvertering inkluderer: Kurtage til realkreditinstituttet (typisk 0,1-0,15% af lånets hovedstol), tinglysningsafgift til staten (ca. 1.850 kr. (justeres årligt) + 1,45% af det nye låns hovedstol), sagsgebyr til banken (3.000-8.000 kr.), og eventuel kursskæring. De samlede omkostninger ligger typisk mellem 30.000-60.000 kr. afhængigt af lånets størrelse, men skal altid holdes op imod den potentielle gældsreduktion, som kan være hundredtusinder af kroner.'
     },
     {
       question: 'Hvornår kan det betale sig at opkonvertere?',

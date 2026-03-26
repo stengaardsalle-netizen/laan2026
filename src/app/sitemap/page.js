@@ -49,7 +49,7 @@ export default function SitemapPage() {
       links: [
         { name: 'Videncenter', href: '/viden', desc: 'Samlet overblik over guides og vejledning' },
         { name: 'Låneordbog', href: '/viden/laaneordbog', desc: 'Over 30 finansielle begreber forklaret' },
-        { name: 'Lovgivning og rettigheder', href: '/viden/lovgivning', desc: 'Kreditaftaleloven, fortrydelsesret og renteloft' },
+        { name: 'Lovgivning og rettigheder', href: '/viden/lovgivning', desc: 'Kreditaftaleloven, fortrydelsesret og ÅOP-loft' },
       ]
     },
     {

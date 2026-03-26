@@ -13,8 +13,8 @@ export default function KoebAfBoligPage() {
     { question: 'Hvor meget skal jeg have i udbetaling?', answer: 'Du skal som minimum have 5% af købsprisen i udbetaling (egne midler). Derudover finansieres typisk 80% via realkreditlån og op til 15% via banklån. De 5% kan komme fra opsparing, arveforskud eller salg af nuværende bolig — men det må ikke være lånte penge.' },
     { question: 'Hvad er en kreditgodkendelse, og hvornår skal jeg have den?', answer: 'En kreditgodkendelse (eller forhåndsgodkendelse) er bankens bekræftelse af, at du kan låne et bestemt beløb. Få den FØR du begynder at kigge på boliger. Den giver dig et realistisk budget og gør dig til en stærkere køber ved forhandlingsbordet.' },
     { question: 'Hvad er forskellen på kontantpris og ejendomsværdi?', answer: 'Kontantprisen er den pris, sælger ønsker for boligen. Ejendomsværdien er den offentlige vurdering, som bruges til at beregne ejendomsværdiskat. Bankens vurdering (handelsværdi) kan afvige fra begge og er den, der bestemmer din belåningsgrad.' },
-    { question: 'Hvilke ekstra omkostninger er der ved boligkøb?', answer: 'Ud over boligens pris skal du regne med: tinglysningsafgift (1.825 kr. + 1,45% af lånebeløbet), advokathonorar (5.000-15.000 kr.), ejerskifteforsikring, evt. bygningsgennemgang, og omkostninger til bankens sagsbehandling. Samlet typisk 3-5% af købsprisen.' },
-    { question: 'Kan jeg købe bolig alene?', answer: 'Ja. Banken vurderer din individuelle økonomi — indkomst, gæld og rådighedsbeløb. Som enlig køber er dit budget typisk lavere, men mange køber ejerlejligheder eller rækkehuse alene. Banken anbefaler normalt, at din samlede gæld ikke overstiger 4 gange din bruttoindkomst.' },
+    { question: 'Hvilke ekstra omkostninger er der ved boligkøb?', answer: 'Ud over boligens pris skal du regne med: tinglysningsafgift (ca. 1.850 kr. (justeres årligt) + 1,45% af lånebeløbet), advokathonorar (5.000-15.000 kr.), ejerskifteforsikring, evt. bygningsgennemgang, og omkostninger til bankens sagsbehandling. Samlet typisk 3-5% af købsprisen.' },
+    { question: 'Kan jeg købe bolig alene?', answer: 'Ja. Banken vurderer din individuelle økonomi — indkomst, gæld og rådighedsbeløb. Som enlig køber er dit budget typisk lavere, men mange køber ejerlejligheder eller rækkehuse alene. Som tommelfingerregel anbefales det, at din samlede gæld ikke overstiger ca. 4 gange din bruttoindkomst — men den konkrete vurdering afhænger af din samlede økonomiske situation.' },
   ]
 
   const faqSchema = {
@@ -107,8 +107,8 @@ export default function KoebAfBoligPage() {
                 </tr></thead>
                 <tbody>
                   {[
-                    { name: 'Tinglysningsafgift (skøde)', amount: '1.825 kr. + 0,6% af købesum' },
-                    { name: 'Tinglysningsafgift (pant)', amount: '1.825 kr. + 1,45% af lånebeløb' },
+                    { name: 'Tinglysningsafgift (skøde)', amount: 'ca. 1.850 kr. (justeres årligt) + 0,6% af købesum' },
+                    { name: 'Tinglysningsafgift (pant)', amount: 'ca. 1.850 kr. (justeres årligt) + 1,45% af lånebeløb' },
                     { name: 'Advokathonorar', amount: '5.000-15.000 kr.' },
                     { name: 'Ejerskifteforsikring', amount: '10.000-25.000 kr.' },
                     { name: 'Bankens sagsgebyr', amount: '5.000-10.000 kr.' },

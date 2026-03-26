@@ -14,7 +14,7 @@ export default function GuidePage() {
     { title: 'Tillægslån i friværdien', desc: 'Frigør penge fra din boligs merværdi.', href: '/boliglaan/tillaegslaan', color: 'from-orange-500 to-red-600' },
     { title: 'Forbrugslån: Renter og ÅOP', desc: 'Forstå de reelle omkostninger ved forbrugslån.', href: '/forbrugslaan/renter-og-aop', color: 'from-yellow-500 to-orange-600' },
     { title: 'Låneordbog', desc: 'Over 30 finansielle begreber forklaret i klart sprog.', href: '/viden/laaneordbog', color: 'from-slate-500 to-slate-700' },
-    { title: 'Lovgivning og rettigheder', desc: 'Kreditaftaleloven, fortrydelsesret, renteloft og Finanstilsynet.', href: '/viden/lovgivning', color: 'from-emerald-500 to-teal-600' },
+    { title: 'Lovgivning og rettigheder', desc: 'Kreditaftaleloven, fortrydelsesret, ÅOP-loft og Finanstilsynet.', href: '/viden/lovgivning', color: 'from-emerald-500 to-teal-600' },
   ]
 
   return (

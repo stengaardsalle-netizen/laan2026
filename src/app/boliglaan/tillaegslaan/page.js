@@ -12,7 +12,7 @@ export default function TillaegsloanPage() {
   const faqs = [
     { question: 'Hvad er friværdi, og hvordan beregnes den?', answer: 'Friværdi er forskellen mellem din boligs aktuelle markedsværdi og din samlede gæld i boligen (realkredit + banklån). Eksempel: Er din bolig vurderet til 4.000.000 kr., og du skylder 2.500.000 kr., er din friværdi 1.500.000 kr. Heraf kan du typisk belåne op til 80% af boligværdien via realkredit.' },
     { question: 'Hvad kan jeg bruge et tillægslån til?', answer: 'Du kan bruge et tillægslån til stort set alt: renovering, energiforbedringer, indfrielse af dyrere lån, investering, børnenes uddannelse, eller som ekstra likviditet. De mest fornuftige formål er dem, der enten øger boligens værdi (renovering) eller reducerer dine samlede renteudgifter (indfrielse af banklån eller forbrugslån).' },
-    { question: 'Hvad koster et tillægslån?', answer: 'Omkostningerne inkluderer: vurdering af boligen (2.000-5.000 kr.), tinglysningsafgift (1.825 kr. + 1,45% af beløbet), kursskæring/kurtage, og eventuel sagsbehandling. Samlet typisk 15.000-40.000 kr. afhængigt af beløbet. Derefter betaler du den løbende ydelse (rente + afdrag + bidrag) som ethvert andet realkreditlån.' },
+    { question: 'Hvad koster et tillægslån?', answer: 'Omkostningerne inkluderer: vurdering af boligen (2.000-5.000 kr.), tinglysningsafgift (ca. 1.850 kr. (justeres årligt) + 1,45% af beløbet), kursskæring/kurtage, og eventuel sagsbehandling. Samlet typisk 15.000-40.000 kr. afhængigt af beløbet. Derefter betaler du den løbende ydelse (rente + afdrag + bidrag) som ethvert andet realkreditlån.' },
     { question: 'Kan jeg få tillægslån med afdragsfrihed?', answer: 'Ja, hvis din samlede belåningsgrad er under 80%. Du kan typisk få afdragsfrihed i op til 10 år. Det holder den månedlige ydelse lav, men husk at restgælden ikke falder i perioden. Afdragsfrihed bør bruges strategisk, ikke som en permanent løsning.' },
     { question: 'Hvornår bør man IKKE tage et tillægslån?', answer: 'Undgå tillægslån, hvis du: allerede har en belåningsgrad tæt på 80%, ikke har et klart formål med pengene, bruger dem til forbrug du ikke kan understøtte med din indkomst, eller hvis du planlægger at sælge boligen inden for kort tid (omlægningsomkostningerne tjener sig ikke ind).' },
   ]
@@ -107,7 +107,7 @@ export default function TillaegsloanPage() {
                 <tbody>
                   {[
                     { name: 'Vurdering af bolig', amount: '2.000-5.000 kr.' },
-                    { name: 'Tinglysningsafgift', amount: '1.825 kr. + 1,45% af beløb' },
+                    { name: 'Tinglysningsafgift', amount: 'ca. 1.850 kr. (justeres årligt) + 1,45% af beløb' },
                     { name: 'Kurtage/kursskæring', amount: '0,1-0,15% af hovedstol' },
                     { name: 'Sagsgebyr til bank', amount: '3.000-8.000 kr.' },
                     { name: 'Samlet (ved 500.000 kr. lån)', amount: 'Ca. 15.000-25.000 kr.' },

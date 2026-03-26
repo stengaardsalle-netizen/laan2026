@@ -7,7 +7,7 @@ import { BookOpen, Scale, FileText, ArrowRight, Coins, Shield } from 'lucide-rea
 export default function VidenPage() {
   const sections = [
     { title: 'Låneordbog', description: 'Alle vigtige begreber forklaret i klart sprog. Fra ÅOP og bidragssats til kursværdi og restgæld.', href: '/viden/laaneordbog', icon: BookOpen, color: 'from-blue-500 to-indigo-600' },
-    { title: 'Lovgivning og rettigheder', description: 'Din forbrugerbeskyttelse ved lån i Danmark. Kreditaftaleloven, fortrydelsesret, renteloft og Finanstilsynets rolle.', href: '/viden/lovgivning', icon: Scale, color: 'from-green-500 to-emerald-600' },
+    { title: 'Lovgivning og rettigheder', description: 'Din forbrugerbeskyttelse ved lån i Danmark. Kreditaftaleloven, fortrydelsesret, ÅOP-loft og Finanstilsynets rolle.', href: '/viden/lovgivning', icon: Scale, color: 'from-green-500 to-emerald-600' },
     { title: 'Guide til boliglån', description: 'Alt om realkreditlån, obligationer, kurser, konvertering og skattefri kursgevinster.', href: '/boliglaan', icon: FileText, color: 'from-purple-500 to-pink-600' },
     { title: 'Forbrugslån: Renter og ÅOP', description: 'Forstå de reelle omkostninger ved forbrugslån. Hvad ÅOP dækker, og hvordan du sammenligner korrekt.', href: '/forbrugslaan/renter-og-aop', icon: Coins, color: 'from-orange-500 to-red-600' },
     { title: 'Opkonvertering', description: 'Hvordan du kan skære hundredtusinder af din restgæld ved at udnytte stigende renter.', href: '/opkonvertering', icon: ArrowRight, color: 'from-cyan-500 to-blue-600' },

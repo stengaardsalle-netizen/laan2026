@@ -56,17 +56,17 @@ export default function LovgivningPage() {
           <section className="mb-14">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center shadow-lg flex-shrink-0"><AlertTriangle className="h-6 w-6 text-white" /></div>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Renteloft og ÅOP-loft</h2>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Omkostningsloft på forbrugslån</h2>
             </div>
-            <p className="text-lg text-slate-700 leading-relaxed mb-6">Danmark har indført et renteloft og et ÅOP-loft for at beskytte forbrugere mod urimeligt dyre lån. Reglerne gælder primært for forbrugslån og kviklån:</p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-6">Danmark har indført et loft over de samlede omkostninger ved forbrugslån for at beskytte forbrugere mod urimeligt dyre lån. Reglerne følger af lov om forbrugslånsvirksomheder:</p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
               <div className="bg-white rounded-2xl p-5 shadow-md border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">Renteloft</h3>
-                <p className="text-slate-600 text-sm">Den årlige rente på forbrugslån må ikke overstige 35% over <a href="https://www.nationalbanken.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Nationalbankens</a> udlånsrente. Det sætter en øvre grænse for, hvor dyrt et lån kan blive.</p>
+                <h3 className="font-bold text-slate-900 mb-2">ÅOP-loft</h3>
+                <p className="text-slate-600 text-sm">De samlede årlige omkostninger i procent (ÅOP) på forbrugslån må ikke overstige 25%. Dette loft blev indført i 2020 og gælder for alle forbrugslånsvirksomheder under tilsyn af <a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Finanstilsynet</a>.</p>
               </div>
               <div className="bg-white rounded-2xl p-5 shadow-md border border-slate-200">
-                <h3 className="font-bold text-slate-900 mb-2">ÅOP-loft</h3>
-                <p className="text-slate-600 text-sm">De samlede årlige omkostninger (ÅOP) må ikke overstige 35% over <a href="https://www.nationalbanken.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Nationalbankens</a> udlånsrente + 15 procentpoint. Det inkluderer alle gebyrer og omkostninger.</p>
+                <h3 className="font-bold text-slate-900 mb-2">Omkostningsloft</h3>
+                <p className="text-slate-600 text-sm">De samlede omkostninger over lånets løbetid (renter, gebyrer og alle øvrige udgifter) må ikke overstige 100% af det oprindelige lånebeløb. Du kan altså aldrig komme til at betale mere end det dobbelte tilbage.</p>
               </div>
             </div>
           </section>
