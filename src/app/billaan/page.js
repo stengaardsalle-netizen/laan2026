@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Header from '../../components/layout/Header'
+import SiteFooter from '../../components/SiteFooter'
 import { 
   Car, 
   Calculator,
@@ -956,78 +957,8 @@ export default function BilloanPage() {
         </div>
       </section>
 
-      {/* Footer - Same as homepage */}
-      <footer className="relative bg-slate-900" aria-labelledby="footer-heading">
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-        
-        <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="space-y-8">
-              <div className="flex items-center gap-4">
-                <div className="h-12 w-12 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/20">
-                  <Car className="h-7 w-7 text-white" />
-                </div>
-                <span className="text-2xl font-black bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  Lån.dk
-                </span>
-              </div>
-              <p className="text-lg leading-8 text-slate-400 max-w-md">
-                Din pålidelige partner til at finde det <span className="font-semibold text-white">bedste billån</span>. 
-                Vi sammenligner tilbud fra Danmarks førende finansielle udbydere.
-              </p>
-            </div>
-            
-            <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
-              <div>
-                <h3 className="text-lg font-bold text-white mb-6">Lånetyper</h3>
-                <ul role="list" className="space-y-4">
-                  <li>
-                    <Link href="/billaan" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Billån
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/boliglaan" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Boliglån
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/forbrugslaan" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Forbrugslån
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="text-lg font-bold text-white mb-6">Information</h3>
-                <ul role="list" className="space-y-4">
-                  <li>
-                    <Link href="/guide" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Billån-guide
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/sammenlign" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Sammenlign lån
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/kontakt" className="text-slate-400 hover:text-white transition-colors duration-300">
-                      Kontakt
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          
-          <div className="mt-16 border-t border-slate-800 pt-8">
-            <p className="text-sm text-slate-500 text-center">
-              &copy; 2025 Sammenlign Lån & Find Det Bedste Tilbud – Lån.dk. Alle rettigheder forbeholdes. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      {/* Footer */}
+      <SiteFooter />
     </div>
   )
 }

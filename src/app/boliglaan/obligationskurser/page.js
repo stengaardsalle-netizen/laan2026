@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Header from '../../../components/layout/Header'
+import SiteFooter from '../../../components/SiteFooter'
 import ArticleByline from '../../../components/ArticleByline'
 import { BarChart3, BookOpen, CheckCircle, ChevronDown, AlertTriangle, Calculator, ArrowRight, TrendingUp, TrendingDown, Coins, Shield, ArrowDownUp, Percent, RefreshCw } from 'lucide-react'
 
@@ -348,7 +349,7 @@ export default function ObligationskurserPage() {
       {/* Editorial note */}
       <section className="py-8 bg-slate-100 border-t border-slate-200"><div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"><p className="text-sm text-slate-500"><strong className="text-slate-700">Redaktionel note:</strong> Obligationskurser ændrer sig løbende. Denne artikel forklarer mekanismerne bag kurserne, men angiver ikke aktuelle markedskurser. Kontakt altid dit realkreditinstitut for konkrete tilbud. <Link href="/om-os/redaktionel-politik" className="text-blue-600 underline">Læs vores redaktionelle politik</Link>.</p></div></section>
 
-      <footer className="bg-slate-900 py-8"><div className="mx-auto max-w-7xl px-4 flex flex-col items-center gap-2"><p className="text-xs text-slate-500">&copy; 2025 Lån.dk ApS — Uafhængig vejledning om lån i Danmark.</p><a href="/sitemap" className="text-xs text-slate-600 hover:text-slate-400 transition-colors">Sitemap</a></div></footer>
+      <SiteFooter />
     </div>
   )
 }

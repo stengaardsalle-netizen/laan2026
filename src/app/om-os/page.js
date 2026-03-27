@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Header from '../../components/layout/Header'
+import SiteFooter from '../../components/SiteFooter'
 import { Shield, Users, Award, Target, CheckCircle, ArrowRight, Heart, TrendingUp, Lightbulb, BookOpen, Phone, Mail, MapPin, User, Building, GraduationCap, Briefcase } from 'lucide-react'
 
 export default function OmOsPage() {
@@ -180,7 +181,7 @@ export default function OmOsPage() {
         </div>
       </section>
 
-      <footer className="bg-slate-900 py-8"><div className="mx-auto max-w-7xl px-4 flex flex-col items-center gap-2"><p className="text-xs text-slate-500">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark.</p><a href="/sitemap" className="text-xs text-slate-600 hover:text-slate-400 transition-colors">Sitemap</a></div></footer>
+      <SiteFooter />
     </div>
   )
 }

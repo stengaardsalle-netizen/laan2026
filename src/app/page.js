@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Header from '../components/layout/Header'
 import { Calculator, Coins, Clock, TrendingUp, Sparkles, ArrowRight, BookOpen, CheckCircle, Shield, Users, Award, ChevronDown, AlertTriangle, Percent, FileText, Scale } from 'lucide-react'
 import ArticleByline from '../components/ArticleByline'
+import SiteFooter from '../components/SiteFooter'
 
 export default function HomePage() {
   const [amount, setAmount] = useState(100000)
@@ -248,25 +249,7 @@ export default function HomePage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-slate-900">
-        <div className="mx-auto max-w-7xl px-4 pb-6 pt-12 sm:px-6 sm:pb-8 sm:pt-20 lg:px-8">
-          <div className="xl:grid xl:grid-cols-3 xl:gap-8">
-            <div className="space-y-6">
-              <div className="flex items-center gap-3"><div className="h-10 w-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg"><Coins className="h-5 w-5 text-white"/></div><span className="text-xl font-black bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Lån.dk</span></div>
-              <p className="text-base text-slate-400 max-w-md">Din uafhængige kilde til vejledning om lån i Danmark. Vi sammenligner tilbud fra Danmarks førende finansielle udbydere.</p>
-              <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-700/50"><p className="font-bold text-white mb-3 text-sm">Kontakt os</p><div className="space-y-2 text-slate-400 text-sm"><p>✉ info@fitezfinance.com</p><p>📍 Stengårds Alle 45, DK-2800 Kgs. Lyngby</p></div></div>
-            </div>
-            <div className="mt-12 grid grid-cols-2 gap-6 xl:col-span-2 xl:mt-0">
-              <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div><h3 className="text-base font-bold text-white mb-4">Lånetyper</h3><ul className="space-y-3">{[{n:'Boliglån',h:'/boliglaan'},{n:'Forbrugslån',h:'/forbrugslaan'},{n:'Billån',h:'/billaan'},{n:'Opkonvertering',h:'/opkonvertering'}].map((l,i)=>(<li key={i}><Link href={l.h} className="text-slate-400 hover:text-white transition-colors text-sm">{l.n}</Link></li>))}</ul></div>
-                <div className="mt-8 md:mt-0"><h3 className="text-base font-bold text-white mb-4">Viden</h3><ul className="space-y-3">{[{n:'Låneordbog',h:'/viden/laaneordbog'},{n:'Lovgivning',h:'/viden/lovgivning'},{n:'Kontakt',h:'/kontakt'},{n:'Om Lån.dk',h:'/om-os'}].map((l,i)=>(<li key={i}><Link href={l.h} className="text-slate-400 hover:text-white transition-colors text-sm">{l.n}</Link></li>))}</ul></div>
-              </div>
-              <div><h3 className="text-base font-bold text-white mb-4">Juridisk</h3><ul className="space-y-3">{[{n:'Privatlivspolitik',h:'/privatlivspolitik'},{n:'Vilkår og betingelser',h:'/vilkaar'},{n:'Cookie-politik',h:'/cookies'},{n:'Redaktionel politik',h:'/om-os/redaktionel-politik'}].map((l,i)=>(<li key={i}><Link href={l.h} className="text-slate-400 hover:text-white transition-colors text-sm">{l.n}</Link></li>))}</ul></div>
-            </div>
-          </div>
-          <div className="mt-12 border-t border-slate-800 pt-6"><div className="flex flex-col md:flex-row items-center justify-between gap-4"><p className="text-xs text-slate-500 text-center md:text-left">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. Alle rettigheder forbeholdes. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a></p><div className="flex items-center gap-2 text-xs text-slate-500"><div className="h-1.5 w-1.5 bg-green-500 rounded-full animate-pulse"></div>SSL sikret</div></div></div>
-        </div>
-      </footer>
+      <SiteFooter />
 
       <style jsx>{`
         .slider::-webkit-slider-thumb{appearance:none;height:20px;width:20px;border-radius:50%;background:#fff;cursor:pointer;box-shadow:0 2px 4px rgba(0,0,0,0.15);border:2px solid #3b82f6;}

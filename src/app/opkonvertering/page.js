@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Header from '../../components/layout/Header'
 import { TrendingUp, CheckCircle, ChevronDown, ArrowRight, BookOpen, Coins, Shield, AlertTriangle, Calculator, ArrowDownUp, Building2, TrendingDown, RefreshCw, Percent } from 'lucide-react'
 import ArticleByline from '../../components/ArticleByline'
+import SiteFooter from '../../components/SiteFooter'
 
 export default function OpkonverteringPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null)
@@ -355,26 +356,7 @@ export default function OpkonverteringPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-slate-900">
-        <div className="mx-auto max-w-7xl px-4 pb-6 pt-12 sm:px-6 sm:pb-8 sm:pt-16 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="h-8 w-8 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center"><Coins className="h-4 w-4 text-white" /></div>
-              <span className="text-lg font-black bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">Lån.dk</span>
-            </div>
-            <nav className="flex gap-6 text-sm text-slate-400">
-              <Link href="/" className="hover:text-white transition-colors">Forside</Link>
-              <Link href="/boliglaan" className="hover:text-white transition-colors">Boliglån</Link>
-              <Link href="/forbrugslaan" className="hover:text-white transition-colors">Forbrugslån</Link>
-              <Link href="/kontakt" className="hover:text-white transition-colors">Kontakt</Link>
-              <Link href="/om-os" className="hover:text-white transition-colors">Om os</Link>
-            </nav>
-          </div>
-          <div className="mt-8 border-t border-slate-800 pt-6">
-            <p className="text-xs text-slate-500 text-center">&copy; 2025 Lån.dk — Uafhængig vejledning om lån i Danmark. <a href="/sitemap" className="text-slate-600 hover:text-slate-400 underline">Sitemap</a></p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }
