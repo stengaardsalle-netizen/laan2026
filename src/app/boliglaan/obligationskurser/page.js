@@ -272,8 +272,8 @@ export default function ObligationskurserPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               {[
-                { name: 'Nykredit', desc: 'Danmarks største realkreditinstitut. Se aktuelle kurser på alle Nykredits obligationsserier.', url: 'https://www.nykredit.dk/dit-liv/bolig/kurser/' },
-                { name: 'Realkredit Danmark', desc: 'Del af Danske Bank-koncernen. Kurser og omlægningsmuligheder.', url: 'https://rd.dk/privat/kurser' },
+                { name: 'Nykredit', desc: 'Danmarks største realkreditinstitut. Se aktuelle kurser på alle Nykredits obligationsserier.', url: 'https://www.nykredit.dk/dit-liv/bolig/kurser/obligationskurser/' },
+                { name: 'Realkredit Danmark', desc: 'Del af Danske Bank-koncernen. Kurser og omlægningsmuligheder.', url: 'https://rd.dk/kurser-og-renter' },
                 { name: 'Jyske Realkredit', desc: 'Del af Jyske Bank-koncernen. Se kurser og beregn omlægning.', url: 'https://www.jyskerealkredit.dk/' },
                 { name: 'Totalkredit', desc: 'Formidler lån via lokale og regionale pengeinstitutter.', url: 'https://www.totalkredit.dk/' },
                 { name: 'DLR Kredit', desc: 'Specialiseret i lån til landbrug og erhverv.', url: 'https://www.dlr.dk/' },
@@ -318,7 +318,6 @@ export default function ObligationskurserPage() {
                 <li>• <a href="https://www.nationalbanken.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Danmarks Nationalbank</a> — Pengepolitik og rentefastsættelse</li>
                 <li>• <a href="https://www.finanstilsynet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Finanstilsynet</a> — Tilsyn med realkreditinstitutter</li>
                 <li>• <a href="https://www.retsinformation.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Retsinformation.dk</a> — Kursgevinstloven og realkreditlovgivning</li>
-                <li>• <a href="https://www.realkreditraadet.dk" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Realkreditrådet</a> — Brancheorganisation for danske realkreditinstitutter</li>
                 <li>• <a href="https://www.nasdaqomxnordic.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-800">Nasdaq Copenhagen</a> — Obligationshandel og kursdata</li>
               </ul>
             </div>
