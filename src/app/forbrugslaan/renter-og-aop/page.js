@@ -1015,7 +1015,7 @@ export default function RenterAOPPage() {
                   <Award className="h-6 w-6 text-yellow-400" />
                 </div>
                 <div className="text-left">
-                  <div className="font-bold text-white">4.8/5 stjerner</div>
+                  <div className="font-bold text-white">Uafhængig vejledning</div>
                   <div className="text-sm text-white/60">kundetilfredshed</div>
                 </div>
               </div>

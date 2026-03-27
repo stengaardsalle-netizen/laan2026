@@ -496,7 +496,7 @@ export default function LaanPengeHurtigtPage() {
                       <ArrowRight className="h-6 w-6 sm:h-8 sm:w-8 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
                     </a>
                     <p className="text-center text-sm sm:text-lg text-orange-200 mt-4 sm:mt-6 font-semibold px-4">
-                      Svar på 5 minutter • Udbetaling samme dag • 50+ udbydere
+                      Sammenlign lånetilbud • Uafhængig vejledning • Gratis service
                     </p>
                   </div>
                 </div>

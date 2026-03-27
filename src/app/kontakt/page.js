@@ -90,7 +90,7 @@ export default function KontaktPage() {
   const supportFeatures = [
     { icon: Shield, title: 'Gratis vejledning', desc: '100% uforpligtende' },
     { icon: Users, title: 'Erfarne eksperter', desc: '15+ års erfaring' },
-    { icon: Award, title: 'Pålidelig service', desc: '4.8/5 stjerner' },
+    { icon: Award, title: 'Pålidelig service', desc: 'Uafhængig vejledning' },
     { icon: Headphones, title: '24/7 support', desc: 'Vi er her når du har brug for os' }
   ]
 
@@ -147,7 +147,7 @@ export default function KontaktPage() {
               
               <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-xl border border-white/20 hover:scale-105 transition-all duration-300 group">
                 <div className="text-3xl font-black text-purple-600 mb-2 group-hover:scale-110 transition-transform duration-300">
-                  4.8★
+                  Uafhængig
                 </div>
                 <div className="text-slate-600 font-semibold">Kundetilfredshed</div>
               </div>
@@ -527,7 +527,7 @@ export default function KontaktPage() {
           <div className="mx-auto max-w-4xl">
             <div className="mb-8 inline-flex items-center gap-4 bg-white/10 backdrop-blur-xl px-6 py-3 rounded-2xl border border-white/20">
               <Star className="h-6 w-6 text-yellow-400" />
-              <span className="font-bold text-white">Over 10.000 tilfredse kunder</span>
+              <span className="font-bold text-white">Uafhængig vejledning om lån i Danmark</span>
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-black text-white mb-6">

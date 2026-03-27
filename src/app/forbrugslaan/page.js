@@ -508,7 +508,7 @@ export default function ForbrugslaanPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Users className="h-6 w-6 text-green-300" />
-                <span className="font-semibold">10.000+ tilfredse kunder</span>
+                <span className="font-semibold">Gratis og uforpligtende</span>
               </div>
               <div className="flex items-center gap-3">
                 <Award className="h-6 w-6 text-green-300" />

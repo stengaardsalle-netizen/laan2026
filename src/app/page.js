@@ -70,7 +70,7 @@ export default function HomePage() {
             <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
               <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-blue-500/15 border-blue-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-blue-300">Gratis</div><div className="text-white/80 font-medium text-xs sm:text-sm">Uafhængig vejledning</div></div>
               <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-indigo-500/15 border-indigo-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-indigo-300">ÅOP</div><div className="text-white/80 font-medium text-xs sm:text-sm">Forstå reelle omkostninger</div></div>
-              <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-green-500/15 border-green-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-green-300">50+</div><div className="text-white/80 font-medium text-xs sm:text-sm">Danske banker sammenlignet</div></div>
+              <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-green-500/15 border-green-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-green-300">Gratis</div><div className="text-white/80 font-medium text-xs sm:text-sm">Sammenlign lånetilbud</div></div>
             </div>
           </div>
         </div>

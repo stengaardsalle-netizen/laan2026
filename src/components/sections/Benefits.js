@@ -140,7 +140,7 @@ export default function Benefits() {
                   <CurrencyDollarIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">50.000+</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Vejledning</div>
               <div className="text-sm text-gray-500">Tilfredse kunder</div>
             </div>
             
@@ -150,8 +150,8 @@ export default function Benefits() {
                   <SparklesIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">23.000 kr</div>
-              <div className="text-sm text-gray-500">Gennemsnitlig besparelse</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Gratis</div>
+              <div className="text-sm text-gray-500">Uforpligtende vejledning</div>
             </div>
             
             <div className="text-center">

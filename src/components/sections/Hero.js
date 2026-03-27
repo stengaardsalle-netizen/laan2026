@@ -41,7 +41,7 @@ export default function Hero() {
           
           <p className="mt-6 text-lg leading-8 text-gray-600 max-w-2xl mx-auto">
             Hos Lån.dk hjælper vi dig med at sammenligne lånetyper, renter og vilkår fra forskellige udbydere. 
-            <strong className="text-blue-600">Spar op til 50.000 kr.</strong> på dit næste lån! 💰
+            Find det <strong className="text-blue-600">billigste lån</strong> til dine behov
           </p>
           
           <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -99,10 +99,10 @@ export default function Hero() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-red-600 shadow-lg">
                   <CurrencyDollarIcon className="h-6 w-6 text-white" />
                 </div>
-                Spar op til 50.000 kr
+                Sammenlign lånetilbud
               </dt>
               <dd className="mt-4 text-base leading-7 text-gray-600">
-                Vores kunder sparer i gennemsnit <strong className="text-orange-600">23.000 kr</strong> ved at bruge vores sammenligningsservice.
+                Brug vores sammenligningsværktøjer til at finde det lån, der passer bedst til din situation.
               </dd>
             </div>
           </dl>
