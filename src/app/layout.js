@@ -55,10 +55,12 @@ export default function RootLayout({ children }) {
     "founder": {
       "@type": "Person",
       "name": "Jesper Jensen",
-      "jobTitle": "Grundlægger og CEO"
+      "jobTitle": "Grundlægger og CEO",
+      "url": "https://www.xn--ln-yia.dk/om-os",
+      "sameAs": ["https://www.linkedin.com/in/jesper-jensen-43824327/"]
     },
     "taxID": "37923680",
-    "sameAs": []
+    "sameAs": ["https://www.linkedin.com/in/jesper-jensen-43824327/"]
   }
 
   const websiteSchema = {

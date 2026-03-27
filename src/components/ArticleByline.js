@@ -12,7 +12,8 @@ export default function ArticleByline({ title, description, datePublished = '202
       "@type": "Person",
       "name": "Jesper Jensen",
       "jobTitle": "Grundlægger og CEO",
-      "url": "https://www.xn--ln-yia.dk/om-os"
+      "url": "https://www.xn--ln-yia.dk/om-os",
+      "sameAs": ["https://www.linkedin.com/in/jesper-jensen-43824327/"]
     },
     "publisher": {
       "@type": "Organization",
