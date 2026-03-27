@@ -11,6 +11,7 @@ export default function sitemap() {
     { url: '/boliglaan/realkredit-vs-banklaan', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/boliglaan/tillaegslaan', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/opkonvertering', priority: 0.8, changeFrequency: 'monthly' },
+    { url: '/boliglaan/obligationskurser', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/forbrugslaan', priority: 0.9, changeFrequency: 'weekly' },
     { url: '/forbrugslaan/renter-og-aop', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/billaan', priority: 0.8, changeFrequency: 'monthly' },

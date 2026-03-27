@@ -41,6 +41,7 @@ export default function Header() {
         { name: 'Køb af bolig', href: '/boliglaan/koeb-af-bolig' },
         { name: 'Realkreditlån vs. banklån', href: '/boliglaan/realkredit-vs-banklaan' },
         { name: 'Omlægning af lån', href: '/opkonvertering' },
+        { name: 'Obligationskurser', href: '/boliglaan/obligationskurser' },
         { name: 'Tillægslån i friværdien', href: '/boliglaan/tillaegslaan' }
       ]
     },

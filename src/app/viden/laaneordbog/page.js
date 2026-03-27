@@ -19,7 +19,7 @@ const terms = [
   { term: 'Friværdi', def: 'Forskellen mellem din boligs markedsværdi og den samlede gæld i boligen. Positiv friværdi betyder, at boligen er mere værd end gælden.' },
   { term: 'Hovedstol', def: 'Det oprindelige lånebeløb, du optager. Adskilt fra den restgæld, der ændres i takt med afdrag og eventuelle kursjusteringer.' },
   { term: 'Kuponrente', def: 'Den nominelle rente på en realkreditobligation. F.eks. 4% på en 4% obligation. Det er denne rente, du betaler som låntager.' },
-  { term: 'Kurs', def: 'Prisen på en obligation udtrykt i procent af pålydende. Kurs 98 betyder, at du får 98 kr. udbetalt for hver 100 kr. du låner.' },
+  { term: 'Kurs', def: 'Prisen på en obligation udtrykt i procent af pålydende. Kurs 98 betyder, at du får 98 kr. udbetalt for hver 100 kr. du låner. Se vores guide til obligationskurser.', url: 'https://www.xn--ln-yia.dk/boliglaan/obligationskurser' },
   { term: 'Kursgevinst', def: 'Gevinst ved at indfri et lån til en lavere kurs end det blev optaget til. Skattefri for private boligejere i Danmark.' },
   { term: 'Kurstab', def: 'Tab ved optagelse af lån, når kursen er under 100. Ved kurs 95 er kurstabet 5% af lånebeløbet.' },
   { term: 'Kreditaftaleloven', def: 'Dansk lov der regulerer forbrugslån og kreditaftaler. Fastsætter krav til oplysningspligt, ÅOP-beregning og fortrydelsesret.' },

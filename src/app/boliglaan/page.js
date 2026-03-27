@@ -178,7 +178,7 @@ export default function BoliglaanPage() {
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900">Obligationer, kurser og kurstab</h2>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Prisen på de obligationer, der er knyttet til dit lån, kaldes kursen. Kursen svinger i takt med markedsrenten og er afgørende for, hvor meget du reelt får udbetalt, og hvad dine muligheder er for konvertering.
+              Prisen på de obligationer, der er knyttet til dit lån, kaldes kursen. Kursen svinger i takt med markedsrenten og er afgørende for, hvor meget du reelt får udbetalt, og hvad dine muligheder er for konvertering. <Link href="/boliglaan/obligationskurser" className="text-blue-600 underline hover:text-blue-800">Læs vores dybdegående guide til obligationskurser</Link>.
             </p>
 
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-6 sm:p-8 border border-purple-200 mb-8">

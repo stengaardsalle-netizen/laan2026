@@ -120,7 +120,7 @@ export default function OpkonverteringPage() {
               Opkonvertering er en af de mest kraftfulde økonomiske muligheder, det danske realkreditsystem giver boligejere. Kort fortalt handler det om at udnytte stigende renter til at reducere din restgæld — potentielt med hundredtusinder af kroner.
             </p>
             <p className="text-lg text-slate-700 leading-relaxed mb-6">
-              Mekanikken er enkel: Når markedsrenten stiger, falder kursen på de obligationer, der er knyttet til dit realkreditlån. Da dit lån er direkte forbundet med disse obligationer (via balanceprincippet), kan du "købe din gæld tilbage" til en lavere pris end den, du oprindeligt lånte til. Du indfrier det gamle lån billigt og optager et nyt lån til den aktuelle (højere) rente.
+              Mekanikken er enkel: Når markedsrenten stiger, falder <Link href="/boliglaan/obligationskurser" className="text-blue-600 underline hover:text-blue-800">kursen på de obligationer</Link>, der er knyttet til dit realkreditlån. Da dit lån er direkte forbundet med disse obligationer (via balanceprincippet), kan du "købe din gæld tilbage" til en lavere pris end den, du oprindeligt lånte til. Du indfrier det gamle lån billigt og optager et nyt lån til den aktuelle (højere) rente.
             </p>
 
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-6 sm:p-8 border border-green-200 mb-6">

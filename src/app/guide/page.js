@@ -11,6 +11,7 @@ export default function GuidePage() {
     { title: 'Køb af bolig', desc: 'Finansiering, udbetaling, kreditgodkendelse og trin-for-trin guide.', href: '/boliglaan/koeb-af-bolig', color: 'from-purple-500 to-pink-600' },
     { title: 'Realkreditlån vs. banklån', desc: 'Dybdegående sammenligning af de to lånetyper.', href: '/boliglaan/realkredit-vs-banklaan', color: 'from-indigo-500 to-violet-600' },
     { title: 'Opkonvertering', desc: 'Skær hundredtusinder af din restgæld med strategisk låneomlægning.', href: '/opkonvertering', color: 'from-cyan-500 to-blue-600' },
+    { title: 'Obligationskurser', desc: 'Forstå kurser på realkreditobligationer, kurstab, kursgevinst og kurssikring.', href: '/boliglaan/obligationskurser', color: 'from-indigo-500 to-violet-600' },
     { title: 'Tillægslån i friværdien', desc: 'Frigør penge fra din boligs merværdi.', href: '/boliglaan/tillaegslaan', color: 'from-orange-500 to-red-600' },
     { title: 'Forbrugslån: Renter og ÅOP', desc: 'Forstå de reelle omkostninger ved forbrugslån.', href: '/forbrugslaan/renter-og-aop', color: 'from-yellow-500 to-orange-600' },
     { title: 'Låneordbog', desc: 'Over 30 finansielle begreber forklaret i klart sprog.', href: '/viden/laaneordbog', color: 'from-slate-500 to-slate-700' },

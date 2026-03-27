@@ -27,6 +27,7 @@ export default function SitemapPage() {
         { name: 'Realkreditlån vs. banklån', href: '/boliglaan/realkredit-vs-banklaan', desc: 'Dybdegående sammenligning af de to lånetyper' },
         { name: 'Tillægslån i friværdien', href: '/boliglaan/tillaegslaan', desc: 'Frigør penge fra din boligs merværdi' },
         { name: 'Opkonvertering', href: '/opkonvertering', desc: 'Skær hundredtusinder af din restgæld' },
+        { name: 'Obligationskurser', href: '/boliglaan/obligationskurser', desc: 'Forstå kurser, kurstab og kursgevinst' },
       ]
     },
     {
