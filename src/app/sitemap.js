@@ -16,8 +16,6 @@ export default function sitemap() {
     { url: '/forbrugslaan/renter-og-aop', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/billaan', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/laan-penge-hurtigt', priority: 0.7, changeFrequency: 'monthly' },
-    { url: '/kviklaan', priority: 0.6, changeFrequency: 'monthly' },
-    { url: '/kviklaan/renter', priority: 0.5, changeFrequency: 'monthly' },
     { url: '/viden', priority: 0.8, changeFrequency: 'weekly' },
     { url: '/viden/laaneordbog', priority: 0.8, changeFrequency: 'monthly' },
     { url: '/viden/lovgivning', priority: 0.7, changeFrequency: 'monthly' },

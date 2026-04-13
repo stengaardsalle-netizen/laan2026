@@ -1,6 +1,6 @@
 export const metadata = {
   title: 'Sammenlign lån og find de bedste vilkår',
-  description: 'Sammenlign boliglån, forbrugslån og billån fra danske udbydere. Gratis og uforpligtende.',
+  description: 'Sammenlign boliglån, forbrugslån og billån fra danske udbydere. Uforpligtende vejledning.',
   alternates: {
     canonical: 'https://www.xn--ln-yia.dk/sammenlign',
   },

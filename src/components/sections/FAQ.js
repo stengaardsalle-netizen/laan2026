@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     question: 'Hvor hurtigt kan jeg få godkendt et lån?',
-    answer: 'Det afhænger af lånetypen. Kviklån kan ofte godkendes og udbetales samme dag, mens forbrugslån typisk tager 1-3 dage. Boliglån kan tage flere uger på grund af omfattende dokumentation og vurdering.'
+    answer: 'Det afhænger af lånetypen. Nogle forbrugslån kan godkendes og udbetales samme dag, mens andre typisk tager 1-3 dage. Boliglån kan tage flere uger på grund af omfattende dokumentation og vurdering.'
   },
   {
     question: 'Påvirker en låneansøgning min kreditværdighed?',
@@ -25,8 +25,8 @@ const faqs = [
     answer: 'Hvis du får betalingsproblemer, er det vigtigt at kontakte din låneudbyder hurtigst muligt. Mange långivere tilbyder løsninger som afdragsfrihed eller ændrede betalingsplaner. Udebliven betaling kan føre til inkasso og påvirke din kreditværdighed negativt.'
   },
   {
-    question: 'Er jeres sammenligningsservice gratis?',
-    answer: 'Ja, vores sammenligningsservice er helt gratis at bruge. Vi får provision fra låneudbyderne, hvis du vælger at optage et lån gennem os, men det påvirker ikke de vilkår, du tilbydes.'
+    question: 'Hvad koster det at bruge Lån.dk?',
+    answer: 'Vores vejledning er uforpligtende. Vi modtager kommission fra låneudbydere, hvis du vælger at optage et lån, men det påvirker ikke de vilkår, du tilbydes.'
   },
   {
     question: 'Hvilke dokumenter skal jeg bruge for at ansøge om et lån?',

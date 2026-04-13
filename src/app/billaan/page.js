@@ -48,7 +48,7 @@ export default function BilloanPage() {
       minRate: 4.2,
       maxRate: 8.5,
       greenDiscount: 0.5,
-      features: ['Markedets laveste renter', 'Gratis kreditvurdering', '24/7 kundeservice'],
+      features: ['Markedets laveste renter', 'Uforpligtende sammenligning', '24/7 kundeservice'],
       rating: 4.6,
       setupFee: 2500,
       logo: '🏦',
@@ -802,7 +802,7 @@ export default function BilloanPage() {
                     </Link>
                   </div>
                   <p className="text-center text-lg text-blue-200 mt-6 font-semibold">
-                    🎯 100% gratis • Ingen forpligtelser • Svar på 24 timer
+                    🎯 Uforpligtende • Svar på 24 timer
                   </p>
                 </div>
               </div>
@@ -895,7 +895,7 @@ export default function BilloanPage() {
             <p className="mx-auto max-w-3xl text-xl lg:text-2xl leading-relaxed text-blue-100 mb-16">
               Sammenlign billån fra Danmarks førende banker på under 2 minutter. 
               <span className="block mt-4 font-bold text-white">
-                100% gratis • Ingen forpligtelser • Hurtig godkendelse
+                Uforpligtende • Hurtig godkendelse
               </span>
             </p>
             

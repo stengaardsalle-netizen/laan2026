@@ -42,7 +42,7 @@ export default function RedaktionelPolitikPage() {
               <h2 className="text-2xl font-black text-slate-900">Sådan tjener vi penge</h2>
             </div>
             <p className="text-lg text-slate-700 leading-relaxed mb-4">Vi ønsker fuld åbenhed om vores forretningsmodel:</p>
-            <p className="text-lg text-slate-700 leading-relaxed mb-4">Lån.dk er en reklamefinansieret vejledningsportal. Vi modtager kommission fra banker og låneudbydere, når vi formidler kontakt mellem dig og dem. Det betyder, at vores service er gratis for dig som bruger.</p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">Lån.dk er en reklamefinansieret vejledningsportal. Vi modtager kommission fra banker og låneudbydere, når vi formidler kontakt mellem dig og dem. Det betyder, at vores vejledning er uforpligtende for dig som bruger.</p>
             <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200">
               <p className="text-blue-900 font-medium"><strong>Vigtigt:</strong> Kommission fra partnere påvirker aldrig det indhold, vi producerer. Vores guides, artikler og låneordbog er skrevet uafhængigt af kommercielle hensyn. Vi nævner aldrig specifikke produkter eller udbydere i vores vejledende indhold uden at gøre det klart, at der er tale om en annoncør.</p>
             </div>

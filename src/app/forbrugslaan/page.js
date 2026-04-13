@@ -45,17 +45,6 @@ export default function ForbrugslaanPage() {
       color: 'from-green-500 to-emerald-600'
     },
     {
-      type: 'Kviklån',
-      icon: Zap,
-      rate: '15-35%',
-      term: '1-12 mdr',
-      amount: '1K-50K kr',
-      purpose: 'Akutte behov',
-      security: 'Ingen',
-      approval: 'Samme dag',
-      color: 'from-orange-500 to-red-600'
-    },
-    {
       type: 'Boliglån',
       icon: Home,
       rate: '2-6%',
@@ -70,10 +59,6 @@ export default function ForbrugslaanPage() {
 
   // FAQ data specific to consumer loans
   const faqs = [
-    {
-      question: 'Hvad er forskellen på forbrugslån og kviklån?',
-      answer: 'Forbrugslån har typisk lavere renter (5-25%) og længere løbetider (1-15 år) sammenlignet med kviklån. Kviklån har højere renter men hurtigere udbetaling. Forbrugslån er bedre til større beløb og længere tilbagebetalingsperioder.'
-    },
     {
       question: 'Hvor hurtigt kan jeg få udbetalt et forbrugslån?',
       answer: 'De fleste forbrugslån bliver godkendt inden for 1-3 hverdage. Nogle digitale udbydere kan udbetale samme dag, hvis din ansøgning er komplet og din økonomi opfylder kravene.'
@@ -509,11 +494,11 @@ export default function ForbrugslaanPage() {
               </div>
               <div className="flex items-center gap-3">
                 <Users className="h-6 w-6 text-green-300" />
-                <span className="font-semibold">Gratis og uforpligtende</span>
+                <span className="font-semibold">Uforpligtende</span>
               </div>
               <div className="flex items-center gap-3">
                 <Award className="h-6 w-6 text-green-300" />
-                <span className="font-semibold">Gratis vejledning</span>
+                <span className="font-semibold">Uafhængig vejledning</span>
               </div>
             </div>
           </div>

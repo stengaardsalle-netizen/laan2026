@@ -128,7 +128,7 @@ export default function OmOsPage() {
       <section className="py-12 sm:py-20 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-6">Sådan tjener vi penge</h2>
-          <p className="text-lg text-slate-700 leading-relaxed mb-4">Vi ønsker fuld åbenhed om vores forretningsmodel. Lån.dk er en reklamefinansieret vejledningsportal. Vi modtager kommission fra banker og låneudbydere, når vi formidler kontakt. Det betyder, at vores service er gratis for dig.</p>
+          <p className="text-lg text-slate-700 leading-relaxed mb-4">Vi ønsker fuld åbenhed om vores forretningsmodel. Lån.dk er en reklamefinansieret vejledningsportal. Vi modtager kommission fra banker og låneudbydere, når vi formidler kontakt. Det betyder, at vores vejledning er uforpligtende for dig.</p>
           <div className="bg-blue-50 rounded-2xl p-5 border border-blue-200 mb-8">
             <p className="text-blue-900 font-medium"><strong>Vigtigt:</strong> Kommission påvirker aldrig vores vejledende indhold. Vores guides, artikler og låneordbog er skrevet uafhængigt af kommercielle hensyn. Læs vores <Link href="/om-os/redaktionel-politik" className="text-blue-700 underline">redaktionelle politik</Link> for mere information.</p>
           </div>

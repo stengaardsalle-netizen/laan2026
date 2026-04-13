@@ -52,7 +52,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative flex items-center gap-2">
                 <BoltIcon className="h-5 w-5" />
-                Sammenlign lån nu - GRATIS
+                Sammenlign lån nu
               </div>
             </Link>
             
@@ -75,10 +75,10 @@ export default function Hero() {
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 shadow-lg">
                   <CheckCircleIcon className="h-6 w-6 text-white" />
                 </div>
-                Gratis sammenligning
+                Uforpligtende sammenligning
               </dt>
               <dd className="mt-4 text-base leading-7 text-gray-600">
-                Sammenlign lån fra <strong className="text-blue-600">15+ udbydere</strong> gratis og find det bedste tilbud på få minutter.
+                Sammenlign lån fra flere danske udbydere og find det bedste tilbud til din situation.
               </dd>
             </div>
 

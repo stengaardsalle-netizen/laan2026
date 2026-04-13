@@ -171,7 +171,7 @@ export default function LoanTypes() {
             className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
           >
             <BoltIcon className="h-5 w-5" />
-            Sammenlign alle lån nu - Det er gratis!
+            Sammenlign alle lån nu
             <ArrowRightIcon className="h-5 w-5" />
           </Link>
         </div>

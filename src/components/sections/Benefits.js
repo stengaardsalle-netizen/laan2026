@@ -19,12 +19,12 @@ const benefits = [
     stats: '15+ udbydere'
   },
   {
-    title: 'Gratis og uforpligtende',
-    description: 'Brug af vores sammenligningsservice er helt gratis. Du betaler kun, hvis du vælger at optage et lån.',
+    title: 'Uforpligtende',
+    description: 'Vores vejledning er uforpligtende. Du vælger selv, om du vil gå videre med et lånetilbud.',
     icon: GiftIcon,
     gradient: 'from-green-500 to-emerald-600',
     bgGradient: 'from-green-50 to-emerald-50',
-    stats: '100% gratis'
+    stats: 'Uforpligtende'
   },
   {
     title: 'Hurtig og sikker proces',
@@ -150,7 +150,7 @@ export default function Benefits() {
                   <SparklesIcon className="h-6 w-6 text-white" />
                 </div>
               </div>
-              <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Gratis</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">Uforpligtende</div>
               <div className="text-sm text-gray-500">Uforpligtende vejledning</div>
             </div>
             

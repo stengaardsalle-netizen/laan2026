@@ -40,8 +40,6 @@ export default function SitemapPage() {
         { name: 'Renter og ÅOP', href: '/forbrugslaan/renter-og-aop', desc: 'Forstå de reelle omkostninger ved forbrugslån' },
         { name: 'Billån', href: '/billaan', desc: 'Finansiering af bilkøb' },
         { name: 'Lån penge hurtigt', href: '/laan-penge-hurtigt', desc: 'Hurtige lån med udbetaling samme dag' },
-        { name: 'Kviklån', href: '/kviklaan', desc: 'Guide til kviklån og hurtige lån' },
-        { name: 'Kviklån renter', href: '/kviklaan/renter', desc: 'Renter og omkostninger ved kviklån' },
       ]
     },
     {

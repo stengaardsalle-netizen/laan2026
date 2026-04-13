@@ -43,16 +43,6 @@ export default function LaanPengeHurtigtPage() {
   // Loan types for quick loans
   const loanTypes = [
     {
-      title: 'Kviklån',
-      icon: TrendingUp,
-      description: 'Få penge på kontoen inden for få timer. Hurtig godkendelse og udbetaling.',
-      rate: '8-25%',
-      stability: 'Høj',
-      risk: 'Medium',
-      color: 'from-orange-500 to-red-600',
-      features: ['Øjeblikkelig svar', 'Samme dag udbetaling', 'Ingen sikkerhed']
-    },
-    {
       title: 'Forbrugslån',
       icon: Lock,
       description: 'Større beløb med længere løbetid. Konkurrencedygtige renter.',
@@ -63,14 +53,14 @@ export default function LaanPengeHurtigtPage() {
       features: ['Faste ydelser', 'Op til 500K kr', 'Længere løbetid']
     },
     {
-      title: 'SMS lån',
-      icon: TrendingDown,
-      description: 'Små beløb med meget hurtig udbetaling. Perfekt til akutte behov.',
-      rate: '15-30%',
-      stability: 'Medium',
-      risk: 'Høj',
+      title: 'Privatlån',
+      icon: TrendingUp,
+      description: 'Fleksible lån til akutte behov med hurtig udbetaling.',
+      rate: '5-15%',
+      stability: 'Høj',
+      risk: 'Medium',
       color: 'from-green-500 to-emerald-600',
-      features: ['Udbetaling på minutter', 'Op til 30K kr', 'Minimal dokumentation']
+      features: ['Hurtig udbetaling', 'Op til 200K kr', 'Ingen sikkerhed']
     }
   ]
 
@@ -126,7 +116,7 @@ export default function LaanPengeHurtigtPage() {
   // Comparison data
   const loanComparison = [
     {
-      type: 'Kviklån',
+      type: 'Privatlån',
       icon: TrendingUp,
       rate: '8-25%',
       term: '1-5 år',
@@ -151,7 +141,7 @@ export default function LaanPengeHurtigtPage() {
   const faqs = [
     {
       question: 'Hvor hurtigt kan jeg få penge på kontoen?',
-      answer: 'Med kviklån kan du få penge på kontoen samme dag - ofte inden for få timer efter godkendelse. SMS lån udbetales typisk på under 30 minutter. Forbrugslån tager normalt 1-3 hverdage.'
+      answer: 'Med hurtige forbrugslån kan du få penge på kontoen samme dag eller inden for 24 timer efter godkendelse. Traditionelle forbrugslån tager normalt 1-3 hverdage.'
     },
     {
       question: 'Hvad kræves der for at få et hurtigt lån?',
@@ -159,11 +149,11 @@ export default function LaanPengeHurtigtPage() {
     },
     {
       question: 'Hvor meget kan jeg låne med hurtige lån?',
-      answer: 'SMS lån: 1.000-30.000 kr. Kviklån: 5.000-200.000 kr. Forbrugslån: 10.000-500.000 kr. Beløbet afhænger af din indtægt og kreditvurdering.'
+      answer: 'Hurtige lån: 5.000-200.000 kr. Forbrugslån: 10.000-500.000 kr. Beløbet afhænger af din indtægt og kreditvurdering.'
     },
     {
       question: 'Er der gebyrer ved hurtige lån?',
-      answer: 'Ja, de fleste hurtige lån har oprettelsesgebyrer og løbende administrationsgebyrer. SMS lån og kviklån har typisk højere gebyrer end traditionelle forbrugslån.'
+      answer: 'Ja, de fleste hurtige lån har oprettelsesgebyrer og løbende administrationsgebyrer. Hurtige lån har typisk højere gebyrer end traditionelle forbrugslån med længere løbetid.'
     },
     {
       question: 'Kan jeg få lån med dårlig kredit?',
@@ -218,7 +208,7 @@ export default function LaanPengeHurtigtPage() {
                 <span className="font-black text-orange-300"> øjeblikkelig løsning</span>
                 <br />
                 <span className="text-base sm:text-lg text-orange-300 mt-2 sm:mt-4 block">
-                  Sammenlign kviklån, SMS lån og forbrugslån fra Danmarks hurtigste udbydere
+                  Sammenlign hurtige forbrugslån fra danske udbydere
                 </span>
               </p>
               
@@ -247,7 +237,7 @@ export default function LaanPengeHurtigtPage() {
                 <div className="bg-orange-600/20 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-orange-400/20">
                   <div className="text-2xl sm:text-4xl font-black text-orange-300 mb-2">30 min</div>
                   <div className="text-white font-semibold text-sm sm:text-base">Hurtigste udbetaling</div>
-                  <div className="text-orange-300 text-xs sm:text-sm">SMS lån</div>
+                  <div className="text-orange-300 text-xs sm:text-sm">Hurtige lån</div>
                 </div>
                 
                 <div className="bg-red-600/20 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-red-400/20">
@@ -259,7 +249,7 @@ export default function LaanPengeHurtigtPage() {
                 <div className="bg-yellow-600/20 backdrop-blur-2xl rounded-2xl p-4 sm:p-6 shadow-2xl border border-yellow-400/20">
                   <div className="text-2xl sm:text-4xl font-black text-yellow-300 mb-2">200K</div>
                   <div className="text-white font-semibold text-sm sm:text-base">Maksimum</div>
-                  <div className="text-yellow-300 text-xs sm:text-sm">Kviklån</div>
+                  <div className="text-yellow-300 text-xs sm:text-sm">Privatlån</div>
                 </div>
               </div>
             </div>
@@ -497,7 +487,7 @@ export default function LaanPengeHurtigtPage() {
                       <ArrowRight className="h-6 w-6 sm:h-8 sm:w-8 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
                     </a>
                     <p className="text-center text-sm sm:text-lg text-orange-200 mt-4 sm:mt-6 font-semibold px-4">
-                      Sammenlign lånetilbud • Uafhængig vejledning • Gratis service
+                      Sammenlign lånetilbud • Uafhængig vejledning • Uforpligtende
                     </p>
                   </div>
                 </div>
@@ -516,7 +506,7 @@ export default function LaanPengeHurtigtPage() {
                 </span>
               </h2>
               <p className="text-lg sm:text-xl text-slate-600 px-4">
-                Se forskellen på kviklån og forbrugslån
+                Se forskellen på hurtige lån og forbrugslån
               </p>
             </div>
 

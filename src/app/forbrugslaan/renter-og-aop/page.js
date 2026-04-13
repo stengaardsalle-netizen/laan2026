@@ -873,7 +873,7 @@ export default function RenterAOPPage() {
                   </Link>
                 </div>
                 <p className="text-center text-lg text-purple-200 mt-6 font-semibold">
-                  🎓 100% gratis • Ingen forpligtelser • Se den rigtige ÅOP
+                  🎓 Uforpligtende • Se den rigtige ÅOP
                 </p>
               </div>
             </div>

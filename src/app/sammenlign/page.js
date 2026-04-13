@@ -25,7 +25,7 @@ export default function SammenlignPage() {
           </h1>
           <p className="mx-auto max-w-3xl text-lg text-blue-100 font-light mb-8">Vælg din lånetype herunder, og brug vores guides og beregner til at forstå de reelle omkostninger, inden du vælger udbyder.</p>
           <div className="inline-flex items-center gap-3 bg-green-500/20 px-5 py-2 rounded-full border border-green-400/20">
-            <Shield className="h-5 w-5 text-green-300" /><span className="text-green-100 font-bold text-sm">100% gratis og uforpligtende</span>
+            <Shield className="h-5 w-5 text-green-300" /><span className="text-green-100 font-bold text-sm">Uforpligtende vejledning</span>
           </div>
         </div>
       </section>
