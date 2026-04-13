@@ -57,7 +57,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-5xl text-center">
             <div className="mb-8 inline-flex items-center gap-3 bg-blue-600/20 backdrop-blur-2xl px-5 py-2 sm:px-8 sm:py-3 rounded-full border border-blue-400/20">
               <div className="relative"><div className="h-2 w-2 bg-green-400 rounded-full animate-ping absolute"></div><div className="h-2 w-2 bg-green-500 rounded-full"></div></div>
-              <span className="text-white font-bold text-sm sm:text-base">Uafhængig vejledning om lån i Danmark</span>
+              <span className="text-white font-bold text-sm sm:text-base">Vejledning om lån i Danmark</span>
             </div>
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight mb-6 leading-tight">
               <span className="bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">Den ultimative guide til</span><br/>
@@ -67,11 +67,6 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mb-12 px-4">
               <a href="#guide" className="inline-flex items-center justify-center gap-3 rounded-full bg-gradient-to-r from-green-600 to-teal-600 px-8 py-4 text-lg font-bold text-white shadow-2xl hover:scale-105 transition-all w-full sm:w-auto"><BookOpen className="h-5 w-5"/>Læs guiden</a>
               <a href="#calculator" className="inline-flex items-center gap-3 text-lg font-bold text-white hover:text-blue-300 transition-colors"><div className="h-12 w-12 rounded-full bg-blue-600/20 backdrop-blur-2xl flex items-center justify-center border border-blue-400/20"><Calculator className="h-6 w-6"/></div>Prøv låneberegneren</a>
-            </div>
-            <div className="grid grid-cols-3 gap-4 max-w-3xl mx-auto">
-              <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-blue-500/15 border-blue-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-blue-300">Uafhængig</div><div className="text-white/80 font-medium text-xs sm:text-sm">Uafhængig vejledning</div></div>
-              <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-indigo-500/15 border-indigo-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-indigo-300">ÅOP</div><div className="text-white/80 font-medium text-xs sm:text-sm">Forstå reelle omkostninger</div></div>
-              <div className="backdrop-blur-2xl rounded-2xl p-3 sm:p-5 border bg-green-500/15 border-green-400/20"><div className="text-xl sm:text-3xl font-black mb-1 text-green-300">Uafhængig</div><div className="text-white/80 font-medium text-xs sm:text-sm">Sammenlign lånetilbud</div></div>
             </div>
           </div>
         </div>
